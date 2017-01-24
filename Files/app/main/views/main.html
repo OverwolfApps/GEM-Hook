@@ -1,0 +1,21 @@
+<header title="GEM">
+	<i class="fa fa-history fa-fw" ng-click="showLog()"></i>
+	<i class="fa fa-video-camera fa-fw" ng-click="showReplays()"></i>
+	<i class="fa fa-cog fa-fw" ng-click="showSettings()"></i>
+</header>
+<div id="content" class="grow">
+	<ul>
+		<li class="row hook" ng-repeat="hook in $storage.hooks track by $index">
+			<span class="grow" ng-class="{'hook-disabled': !hook.enabled}" ng-click="hook.enabled = !hook.enabled">{{hook.selectedGame.name}} on {{hook.selectedEvent.name}} {{hook.selectedAction}}</span>
+			<div class="no-shrink">
+				<i class="fa fa-pencil fa-fw" ng-click="editHook($index)"></i> | <i class="fa fa-times fa-fw" ng-click="deleteHook($index)"></i>
+			</div>
+		</li>
+		<li class="hook" ng-if="!$storage.hooks.length">
+			<span style="border-color: transparent">No event hooks</span>
+		</li>
+	</ul>
+</div>
+<footer>
+	<button class="btn" ng-click="newHook()">New event hook</button>
+</footer>

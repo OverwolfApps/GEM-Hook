@@ -1,0 +1,32 @@
+body {
+	background: rgba(0, 0, 0, 0.9);
+	border: 1px solid #4D74A4;
+	color: #FFF;
+}
+input[type=text], input[type=url], input[type=number], select {
+	background: linear-gradient(#DAD9D7, #B1AFAE);
+	color: #3F3F3F;
+	border-radius: 3px;
+	border: 1px solid #6E6A66;
+}
+input[type=text]:hover, input[type=url]:hover, input[type=number]:hover, select:hover {
+	background: linear-gradient(#FFF, #EEE);
+	border-color: #009DFF;
+}
+h1, h2, h3, h4, h5, h6, th {
+	text-shadow: 0 0 20px #009DFF;
+}
+#header {
+	background: linear-gradient(#203A5C, #122134);
+}
+#footer {
+	border-top: 1px solid #4D74A4;
+}
+.btn {
+	background: linear-gradient(#3368A8, #0F2949);
+	border: 1px solid #497EBF;
+	border-radius: 4px;
+}
+.btn:not([disabled]):hover {
+	background: linear-gradient(#3270BE, #0B4083);
+}

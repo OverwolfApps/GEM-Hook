@@ -1,0 +1,270 @@
+{
+	"open": [
+		{
+			"name": "bounce",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "flash",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "pulse",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "rubberBand",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "shake",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "swing",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "tada",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "wobble",
+			"group": "Attention Seekers"
+		},
+		{
+			"name": "bounceIn",
+			"group": "Bouncing Entrances"
+		},
+		{
+			"name": "bounceInDown",
+			"group": "Bouncing Entrances"
+		},
+		{
+			"name": "bounceInLeft",
+			"group": "Bouncing Entrances"
+		},
+		{
+			"name": "bounceInRight",
+			"group": "Bouncing Entrances"
+		},
+		{
+			"name": "bounceInUp",
+			"group": "Bouncing Entrances"
+		},
+		{
+			"name": "fadeIn",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInDown",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInDownBig",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInLeft",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInLeftBig",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInRight",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInRightBig",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInUp",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "fadeInUpBig",
+			"group": "Fading Entrances"
+		},
+		{
+			"name": "flip",
+			"group": "Flippers"
+		},
+		{
+			"name": "flipInX",
+			"group": "Flippers"
+		},
+		{
+			"name": "flipInY",
+			"group": "Flippers"
+		},
+		{
+			"name": "lightSpeedIn",
+			"group": "Lightspeed"
+		},
+		{
+			"name": "rotateIn",
+			"group": "Rotating Entrances"
+		},
+		{
+			"name": "rotateInDownLeft",
+			"group": "Rotating Entrances"
+		},
+		{
+			"name": "rotateInDownRight",
+			"group": "Rotating Entrances"
+		},
+		{
+			"name": "rotateInUpLeft",
+			"group": "Rotating Entrances"
+		},
+		{
+			"name": "rotateInUpRight",
+			"group": "Rotating Entrances"
+		},
+		{
+			"name": "rollIn",
+			"group": "Specials"
+		},
+		{
+			"name": "zoomIn",
+			"group": "Zoom Entrances"
+		},
+		{
+			"name": "zoomInDown",
+			"group": "Zoom Entrances"
+		},
+		{
+			"name": "zoomInLeft",
+			"group": "Zoom Entrances"
+		},
+		{
+			"name": "zoomInRight",
+			"group": "Zoom Entrances"
+		},
+		{
+			"name": "zoomInUp",
+			"group": "Zoom Entrances"
+		}
+	],
+	"close": [
+		{
+			"name": "bounceOut",
+			"group": "Bouncing Exits"
+		},
+		{
+			"name": "bounceOutDown",
+			"group": "Bouncing Exits"
+		},
+		{
+			"name": "bounceOutLeft",
+			"group": "Bouncing Exits"
+		},
+		{
+			"name": "bounceOutRight",
+			"group": "Bouncing Exits"
+		},
+		{
+			"name": "bounceOutUp",
+			"group": "Bouncing Exits"
+		},
+		{
+			"name": "fadeOut",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutDown",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutDownBig",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutLeft",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutLeftBig",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutRight",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutRightBig",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutUp",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "fadeOutUpBig",
+			"group": "Fading Exits"
+		},
+		{
+			"name": "flipOutX",
+			"group": "Flippers"
+		},
+		{
+			"name": "flipOutY",
+			"group": "Flippers"
+		},
+		{
+			"name": "lightSpeedOut",
+			"group": "Lightspeed"
+		},
+		{
+			"name": "rotateOut",
+			"group": "Rotating Exits"
+		},
+		{
+			"name": "rotateOutDownLeft",
+			"group": "Rotating Exits"
+		},
+		{
+			"name": "rotateOutDownRight",
+			"group": "Rotating Exits"
+		},
+		{
+			"name": "rotateOutUpLeft",
+			"group": "Rotating Exits"
+		},
+		{
+			"name": "rotateOutUpRight",
+			"group": "Rotating Exits"
+		},
+		{
+			"name": "hinge",
+			"group": "Specials"
+		},
+		{
+			"name": "rollOut",
+			"group": "Specials"
+		},
+		{
+			"name": "zoomOut",
+			"group": "Zoom Exits"
+		},
+		{
+			"name": "zoomOutDown",
+			"group": "Zoom Exits"
+		},
+		{
+			"name": "zoomOutLeft",
+			"group": "Zoom Exits"
+		},
+		{
+			"name": "zoomOutRight",
+			"group": "Zoom Exits"
+		},
+		{
+			"name": "zoomOutUp",
+			"group": "Zoom Exits"
+		}
+	]
+}

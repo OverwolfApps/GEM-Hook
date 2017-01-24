@@ -1,0 +1,40 @@
+body {
+	background: rgba(0, 0, 0, 0.9);
+	border: 1px solid #DF4E1F;
+	color: #FFF;
+}
+input[type=text], input[type=url], input[type=number], select {
+	background: #000;
+	border: 1px solid #666;
+}
+input[type=text]:hover, input[type=url]:hover, input[type=number]:hover, select:hover {
+	border-color: #FFF;
+}
+option, optgroup {
+	background: #000;
+}
+#header {
+	background: #000;
+}
+#header h3 {
+	text-transform: uppercase;
+}
+#footer {
+	border-top: 1px solid #DF4E1F;
+}
+.btn {
+	background: transparent;
+	border: 2px solid #DF4E1F;
+	color: #DF4E1F;
+	text-transform: uppercase;
+}
+.btn:not([disabled]):hover {
+	background: #3F1C16;
+}
+.btn:not([disabled]):active {
+	background: #5C1C05;
+	color: #FFF;
+}
+.checkbox-active h4 {
+	color: #FF4400;
+}

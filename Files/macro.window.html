@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html ng-app="gemApp">
+<head>
+	<meta charset="UTF-8">
+	<title>GEM - Macros</title>
+
+	<link rel="stylesheet" href="assets/css/angularjs-color-picker.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/flex.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+	<link themer-link>
+	<style>
+		#keyboardWrapper {
+			margin: 20px 0;
+		}
+		#keyboardContainer {
+			position: relative;
+			width: 947px;
+			height: 326px;
+		}
+		#keyboardContainer img {
+			position: absolute;
+			top: 0;
+		}
+		#keyboardKeys {
+			margin-top: 64px;
+			margin-left: 18px;
+		}
+		.keyboard-row {
+			margin-bottom: 13px;
+		}
+		.keyboard-row:first-child {
+			margin-bottom: 24px;
+		}
+		.keyboard-key {
+			display: inline-block;
+			width: 24px;
+			height: 26px;
+			margin-right: 17px;
+			background-color: #000;
+		}
+		.ESC {
+			margin-right: 44px;
+		}
+		.F4, .F8 {
+			margin-right: 45px;
+		}
+		.CAPS_LOCK {
+			margin-right: 27px;
+		}
+		.ENTER {
+			margin-right: 167px;
+		}
+		.LEFT_CONTROL {
+			margin-right: 18px;
+		}
+		.RIGHT_CONTROL {
+			margin-right: 33px;
+		}
+		.ARROW_RIGHT, .F12, .BACKSPACE, .PAGE_UP, .PAGE_DOWN, .BACKSLASH {
+			margin-right: 30px;
+		}
+		.RIGHT_SHIFT, .ARROW_UP {
+			margin-right: 71px;
+		}
+		.TAB, .CAPS_LOCK, .LEFT_CONTROL, .RIGHT_CONTROL, .BACKSLASH {
+			width: 45px;
+		}
+		.SPACE {
+			width: 221px;
+		}
+		.BACKSPACE, .NUM_ZERO {
+			width: 65px;
+		}
+		.LEFT_WINDOWS, .LEFT_ALT, .RIGHT_ALT, .APPLICATION_SELECT, .RIGHT_WINDOWS {
+			width: 33px;
+		}
+		.RIGHT_SHIFT {
+			width: 96px;
+		}
+		.LEFT_SHIFT, .ENTER {
+			width: 75px;
+		}
+		.NUM_ENTER, .NUM_PLUS {
+			position: absolute;
+			left: 907px;
+			height: 65px;
+		}
+
+		.state.active {
+			background: rgba(100, 100, 100, 0.1);
+		}
+
+		/*
+		*	UI SELECTABLE
+		*/
+		.ui-selectable-helper {
+			border-color: #fff;
+		}
+		.ui-selected::before {
+			position: absolute;
+			width: 24px;
+			height: 26px;
+			z-index: 999;
+			content: ' ';
+			box-sizing: border-box;
+			border-radius: 5px;
+			box-shadow: 0 0 15px #fff;
+		}
+		.ui-selected.TAB::before, .ui-selected.CAPS_LOCK::before, .ui-selected.LEFT_CONTROL::before, .ui-selected.RIGHT_CONTROL::before, .ui-selected.BACKSLASH::before {
+			width: 45px;
+		}
+		.ui-selected.SPACE::before {
+			width: 221px;
+		}
+		.ui-selected.BACKSPACE::before, .ui-selected.NUM_ZERO::before {
+			width: 65px;
+		}
+		.ui-selected.LEFT_WINDOWS::before, .ui-selected.LEFT_ALT::before, .ui-selected.RIGHT_ALT::before, .ui-selected.APPLICATION_SELECT::before, .ui-selected.RIGHT_WINDOWS::before {
+			width: 33px;
+		}
+		.ui-selected.RIGHT_SHIFT::before {
+			width: 96px;
+		}
+		.ui-selected.LEFT_SHIFT::before, .ui-selected.ENTER::before {
+			width: 75px;
+		}
+		.ui-selected.NUM_ENTER::before, .ui-selected.NUM_PLUS::before {
+			height: 68px;
+		}
+	</style>
+
+	<script src="libs/q.js"></script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/jquery-ui.min.js"></script>
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-animate.min.js"></script>
+	<script src="libs/themer.js"></script>
+	<script src="libs/ngStorage.min.js"></script>
+	<script src="libs/tinycolor-min.js"></script>
+	<script src="libs/angularjs-color-picker.min.js"></script>
+
+	<script src="app/macro/module.js"></script>
+	<script src="app/macro/controllers/main.controller.js"></script>
+
+	<script src="app/macro/directives/selectable.js"></script>
+	<script src="app/shared/directives/header.js"></script>
+	<script src="app/shared/directives/footer.js"></script>
+	<script src="app/shared/directives/checkbox.js"></script>
+	<script src="app/shared/directives/info.js"></script>
+</head>
+<body class="column" ng-controller="MainController">
+	<header title="GEM - Macros"></header>
+	<div id="content" class="grow">
+		<div id="keyboardWrapper" class="row-center" selectable="keysSelected($keys)">
+			<div id="keyboardContainer" class="no-shrink">
+				<div id="keyboardKeys">
+					<div class="keyboard-row" ng-repeat="row in selectedMacro.states[selectedStateIndex].data" no-anim>
+						<div class="keyboard-key" ng-repeat="key in row" ng-class="key.name" ng-style="{'background-color': key.color}" no-anim></div>
+					</div>
+				</div>
+				<img src="assets/images/keyboard.png" style="pointer-events: none">
+			</div>
+		</div>
+		<div class="row">
+			<div class="column half">
+				<div class="form-group">
+					<h4>Macro</h4>
+					<select ng-model="selectedMacro" ng-options="macro.name for macro in macros"></select>
+					<div class="btn-group">
+						<button class="btn" ng-click="addMacro()"><i class="fa fa-plus fa-fw" ></i></button>
+						<button class="btn" ng-click="changeName()" ng-disabled="!selectedMacro"><i class="fa fa-pencil fa-fw" ></i></button>
+						<button class="btn" ng-click="deleteMacro()" ng-disabled="!selectedMacro"><i class="fa fa-trash fa-fw" ></i></button>
+					</div>
+				</div>
+				<div class="column grow" ng-if="selectedMacro">
+					<div class="form-group grow">
+						<table>
+							<thead>
+								<tr>
+									<th>Index</th>
+									<th>Duration (ms)</info></th>
+									<th>Transparent <info text="infos['transparent']"></info></th>
+									<th>Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="state" ng-class="{active: selectedStateIndex === $index}" ng-repeat="state in selectedMacro.states track by $index" ng-click="selectState($index)">
+									<td style="text-align: right" ng-bind="$index"></td>
+									<td>
+										<input type="number" min="0.1" required ng-model="state.duration">
+									</td>
+									<td>
+										<checkbox class="row-center" ng-model="state.transparent"></checkbox>
+									</td>
+									<td style="text-align: center">
+										<i class="fa fa-trash" ng-click="removeState($index)"></i>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="row-right">
+						<div class="btn-group">
+							<button class="btn" ng-click="addState()"><i class="fa fa-plus fa-fw"></i> Add state</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column half">
+				<div class="form-group" ng-if="selectedMacro.states.length && selectedKeys.length">
+					<h4>Properties</h4>
+					<div class="form-group">
+						<h4>Name</h4>
+						<input type="text" readonly ng-model="properties.name">
+					</div>
+					<div class="form-group">
+						<h4>Condition <info text="infos['condition']"></info></h4>
+						<input type="text" ng-model="properties.condition">
+					</div>
+					<div class="form-group">
+						<h4>Effect</h4>
+						<select ng-model="properties.effect">
+							<option>Fixed</option>
+							<option>Flash</option>
+							<option>Pulse</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<h4>Color</h4>
+						<color-picker ng-model="properties.color" event-api="colorPickerEventApi"></color-picker>
+					</div>
+					<div class="form-group" ng-if="properties.effect === 'Pulse'">
+						<h4>Finish color</h4>
+						<color-picker ng-model="properties.finishColor" event-api="colorPickerEventApi"></color-picker>
+					</div>
+					<div class="form-group" ng-if="properties.effect === 'Flash'">
+						<h4>Speed</h4>
+						<select ng-model="properties.interval">
+							<option value="250">Slower</option>
+							<option value="200">Slow</option>
+							<option value="150">Normal</option>
+							<option value="100">Fast</option>
+							<option value="50">Faster</option>
+						</select>
+					</div>
+					<div class="btn-group">
+						<button class="btn" ng-click="reset()">Reset</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<button class="btn" ng-click="save()">Save</button>
+	</footer>
+</body>
+</html>

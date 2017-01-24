@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	font-size: 100%;
+	font: inherit;
+	color: inherit;
+	vertical-align: baseline;
+}
+*[ng-click]:not([disabled]) {
+	cursor: pointer;
+}
+*[disabled] {
+	opacity: 0.5;
+}
+html, body {
+	height: 100%;
+}
+body {
+	box-sizing: border-box;
+	overflow: hidden;
+	line-height: 1;
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	-webkit-user-select: none;
+	cursor: default;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th, td {
+	padding-bottom: 2px;
+}
+th:not(:first-child), td:not(:first-child) {
+	padding-left: 2px;
+}
+ul {
+	list-style: none;
+}
+ul li {
+	margin-bottom: 5px;
+}
+h1, h2, h3, h4, h5, h6, th {
+	font-weight: bold;
+}
+input[type=text], input[type=url], input[type=number], select {
+	width: 100%;
+	box-sizing: border-box;
+}
+input[type=text], input[type=url], input[type=number] {
+	padding: 1px 4px;
+}
+input[type=number] {
+	text-align: right;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input.ng-touched.ng-invalid {
+	border-color: red;
+}
+#header, #content, #footer {
+	padding: 5px;
+}
+#footer {
+	position: relative;
+	background-position: 5px;
+}
+#content {
+	overflow: hidden;
+	overflow-y: auto;
+}
+#resizeButton {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	cursor: nwse-resize;
+}
+.btn {
+	padding: 5px 10px;
+}
+.small {
+	font-size: 0.8em;
+}
+.form-group {
+	padding: 6px 0;
+}
+.form-group > h4 {
+	margin-bottom: 2px;
+}
+.form-group .form-group {
+	margin-left: 5px;
+}
+.btn-group {
+	margin: 4px 0;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.row-right .btn {
+	margin-left: 5px;
+}
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, .1);
+}
+::-webkit-scrollbar-thumb {
+	background: #FFF;
+	border-radius: 2px;
+}
+.tooltip {
+	position: absolute;
+	background: #111;
+	padding: 7px 10px;
+	max-width: 250px;
+	color: #fff;
+}
+.tooltip::before {
+	position: absolute;
+	content: "▲";
+	top: -10px;
+	left: 5px;
+	color: #111;
+}
+
+/*
+* animations
+*/
+
+*[ng-show]:not([no-anim]).ng-hide-remove, *[ng-hide]:not([no-anim]).ng-hide-remove {
+	transition: opacity ease-in 50ms;
+	opacity: 0;
+}
+*[ng-show]:not([no-anim]).ng-hide-remove.ng-hide-remove-active, *[ng-hide]:not([no-anim]).ng-hide-remove.ng-hide-remove-active {
+	opacity: 1;
+}
+
+*[ng-repeat]:not([no-anim]).ng-enter, *[ng-if]:not([no-anim]).ng-enter, *[ng-switch-when]:not([no-anim]).ng-enter {
+	transition: opacity ease-in 50ms;
+	opacity: 0;
+}
+*[ng-repeat]:not([no-anim]).ng-enter-active, *[ng-if]:not([no-anim]).ng-enter-active, *[ng-switch-when]:not([no-anim]).ng-enter-active {
+	opacity: 1;
+}
+
+/*
+*	color-picker overrides
+*/
+
+.color-picker-wrapper .color-picker-input-wrapper {
+	width: 100%;
+}
+
+.color-picker-input {
+	text-transform: uppercase;
+}

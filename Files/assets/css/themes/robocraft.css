@@ -1,0 +1,43 @@
+body {
+	background: #282726;
+	color: #FFF;
+}
+input[type=text], input[type=url], input[type=number], select {
+	background: #040402;
+	font-weight: bold;
+}
+input[type=text]:hover, input[type=url]:hover, input[type=number]:hover, select:hover {
+	background: #FFF;
+	color: #040402;
+}
+input.ng-touched.ng-invalid {
+  color: red;
+}
+option, optgroup {
+	background: #FE8411;
+	color: #040402;
+}
+#header {
+	background: #4A4948;
+}
+#header h3 {
+	text-transform: uppercase;
+}
+#header h3::before {
+	content: "// ";
+}
+#footer {
+	border-top: 1px solid #4A4948;
+}
+.btn {
+	background: #FF8511;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.btn.back {
+	background: #A10000;
+}
+.btn:not([disabled]):hover {
+	background: #FFF;
+	color: #000;
+}
