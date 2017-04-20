@@ -2256,6 +2256,52 @@
 						]
 					}
 				]
+			},
+			{
+				"id": 12,
+				"name": "player_activity_change",
+				"comment": "The player started playing or The player entered the game’s menu",
+				"keys": [
+					{
+						"id": 0,
+						"name": "player_activity_change",
+						"info": "The new activity state",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "playing"
+							},
+							{
+								"id": 1,
+								"name": "menu"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 13,
+				"name": "team_set",
+				"comment": "The player selected a team",
+				"keys": [
+					{
+						"id": 0,
+						"name": "team_set",
+						"info": "The team the player joined",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "CT"
+							},
+							{
+								"id": 1,
+								"name": "T"
+							}
+						]
+					}
+				]
 			}
 		]
 	},
