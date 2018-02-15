@@ -1,0 +1,30 @@
+
+/* Klavika */
+
+@font-face {
+  font-family: 'KlavikaWebBasicLight';
+  src: url('../assets/fonts/klavika/KlavikaWebBasicLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KlavikaWebBasicRegular';
+  src: url('../assets/fonts/klavika/KlavikaWebBasicRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KlavikaWebBasicRegularItalic';
+  src: url('../assets/fonts/klavika/KlavikaWebBasicRegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KlavikaWebBasicMedium';
+  src: url('../assets/fonts/klavika/KlavikaWebBasicMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

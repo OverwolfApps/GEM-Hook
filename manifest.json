@@ -1,88 +1,26 @@
 {
-	"manifest_version": 1,
-	"type": "WebApp",
-	"meta": {
-		"name": "GEM",
-		"version": "2.2.5",
-		"minimum-overwolf-version": "0.101",
-		"author": "goodbyte",
-		"icon": "IconMouseOver.png",
-		"icon_gray": "IconMouseNormal.png",
-		"description": "Get total control over the Overwolf events API with this simple yet powerful app."
+	"manifest_version":1,
+	"type":"WebApp",
+	"meta":{
+		"name":"GEM",
+		"version":"3.0.3",
+		"minimum-overwolf-version":"0.100.227.0",
+		"author":"goodbyte",
+		"icon":"icon.png",
+		"icon_gray":"icon_gray.png",
+		"description":""
 	},
-	"permissions": ["Clipboard", "Extensions", "FileSystem", "GameControl", "GameInfo", "Hotkeys", "LogitechLed", "Media", "Profile", "Streaming"],
 	"data": {
-		"start_window": "mainWindow",
-		"windows": {
-			"mainWindow": {
-				"file": "Files/main.window.html",
-				"transparent": true,
-				"size": {
-					"width": 350,
-					"height": 490
+		"start_window":"MainWindow",
+		"windows":{
+			"MainWindow":{
+					"file":"Files/index.html",
+					"transparent":true,
+					"resizable":false,
+					"size":{"width":550, "height":340},
+					"min_size":{"width":550, "height":340},
+					"max_size":{"width":550, "height":340}
 				},
-				"min_size": {
-					"width": 350,
-					"height": 490
-				},
-				"block_top_window_navigation": true
-			},
-			"playerWindow": {
-				"file": "Files/player.window.html",
-				"transparent": true,
-				"grab_keyboard_focus": true,
-				"size": {
-					"width": 1280,
-					"height": 720
-				},
-				"block_top_window_navigation": true
-			},
-			"notificationWindow": {
-				"file": "Files/notification.window.html",
-				"transparent": true,
-				"show_in_taskbar": false,
-				"grab_focus_on_desktop": false,
-				"size": {
-					"width": 1280,
-					"height": 720
-				},
-				"block_top_window_navigation": true
-			},
-			"macroWindow": {
-				"file": "Files/macro.window.html",
-				"transparent": true,
-				"size": {
-					"width": 980,
-					"height": 720
-				},
-				"start_position": {
-					"top": 150,
-					"left": 200
-				},
-				"block_top_window_navigation": true
-			},
-			"inputWindow": {
-				"file": "Files/input.window.html",
-				"transparent": true,
-				"show_in_taskbar": false,
-				"show_only_on_stream": true,
-				"in_game_only": true,
-				"size": {
-					"width": 720,
-					"height": 400
-				},
-				"block_top_window_navigation": true
-			}
-		},
-		"hotkeys": {
-			"instant-replay": {
-				"title": "Instant replay",
-				"action-type": "custom",
-				"default": "Shift+F9"
-			}
-		},
-		"protocol_override_domains": {
-			"googlesyndication": "http"
 		}
 	}
 }

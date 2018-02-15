@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OP.GG in-game stats</title>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+		<script>
+		
+		function dragMove(){
+			overwolf.windows.getCurrentWindow(function(result){
+				if (result.status=="success"){
+					overwolf.windows.dragMove(result.window.id);
+				}
+			});
+		};
+		
+		function closeWindow(){
+			overwolf.windows.getCurrentWindow(function(result){
+				if (result.status=="success"){
+					overwolf.windows.close(result.window.id);
+				}
+			});
+		};
+
+	</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+<symbol id="window-control_close" viewBox="0 0 30 30">
+	<path d="M15.7,15l5.1-5.1a.5.5,0,0,0-.7-.7L15,14.3,9.9,9.1a.5.5,0,0,0-.7.7L14.3,15,9.1,20.1a.5.5,0,0,0,0,.7h.7L15,15.7l5.1,5.1h.7a.5.5,0,0,0,0-.7Z" />
+</symbol>
+
+<symbol id="twitch-repaire" viewBox="0 0 80 80">
+	<rect x="64" y="52" width="8" height="14" fill="none" stroke="#c21913" stroke-width="4"/>
+	<polygon points="77 24 58 24 58 14 74 14 77 24" fill="none" stroke="#c21913" stroke-width="4"/>
+	<line x1="68" y1="26" x2="68" y2="50" fill="none" stroke="#c21913" stroke-width="4"/>
+	<rect x="36" y="52" width="8" height="14" fill="none" stroke="#c21913" stroke-width="4"/>
+	<line x1="40" y1="36" x2="40" y2="50" fill="none" stroke="#c21913" stroke-width="4"/>
+	<polygon points="44 34 36 34 34 26 36 20 44 20 46 26 44 34" fill="none" stroke="#c21913" stroke-width="4"/>
+	<rect x="8" y="52" width="8" height="14" fill="none" stroke="#c21913" stroke-width="4"/>
+	<line x1="12" y1="30" x2="12" y2="50" fill="none" stroke="#c21913" stroke-width="4"/>
+	<polyline points="22 16 22 22 18 28 6 28 2 22 2 16" fill="none" stroke="#c21913" stroke-width="4"/>
+</symbol>
+
+
+
+</svg>
+
+	<main onmousedown="dragMove();">
+
+
+		<i class="unsupported-app">
+			<svg class="svg-icon-fill">
+				<use xlink:href="#twitch-repaire" />
+			</svg>
+		</i>
+
+		<h1>The GEM app is no longer available.</h1><br>
+		<p>We are sorry to inform you that the GEM Overwolf app is shutting down, and is no longer available.</p>
+		<p><strong>                                                                                               </strong></p>
+		 
+		
+		<i class="window-controls" onclick="closeWindow();">
+			<svg class="svg-icon-fill">
+				<use xlink:href="#window-control_close" />
+			</svg>
+		</i>
+	</main>
+
+</body>
+</html>

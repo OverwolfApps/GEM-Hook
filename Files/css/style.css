@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+body {
+  font-family: "KlavikaWebBasicRegular", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+a {
+  color: #c21913;
+  transition: .15s;
+}
+
+a:hover, a:active {
+  color: red;
+}
+
+strong {
+  font-family: "KlavikaWebBasicMedium", sans-serif;
+}
+
+i {
+  display: flex;
+}
+
+i svg {
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.svg-icon-fill {
+  fill: currentcolor;
+}
+
+.window-controls {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  cursor: default;
+  color: #828282;
+  transition: 0.15s;
+}
+
+.window-controls:hover {
+  color: white;
+  background-color: #c21913;
+}
+
+.unsupported-app {
+  width: 80px;
+  height: 80px;
+  margin-bottom: auto;
+  color: #c21913;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+}
+
+main {
+  color: #131313;
+  background-color: #f6f6f6;
+  position: relative;
+  width: 530px;
+  height: 320px;
+  padding: 30px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+main > * + * {
+  margin-top: 10px;
+}
+
+main {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+  overflow: visible;
+}
