@@ -1,0 +1,23 @@
+<div id="content" class="grow">
+	<h6 class="legend">Logs</h6>
+	<p ng-if="!$storage.events.length">No logs yet</p>
+	<table class="event-log" ng-if="$storage.events.length">
+		<thead>
+			<tr>
+				<th>Time</th>
+				<th>Event Name</th>
+				<th>Event Data</th>
+			</tr>
+		</thead>
+		<tr ng-repeat="event in $storage.events">
+			<td ng-bind="::event.time"></td>
+			<td ng-bind="::event.name"></td>
+			<td>
+				<p ng-repeat="(key, value) in event.data" ng-click="placeOnClipboard(value)">{{::key}} ( {{::value}} )</p>
+			</td>
+		</tr>
+	</table>
+</div>
+<footer>
+	<button class="btn" ng-disabled="!$storage.events.length" ng-click="clearLog()">Clear</button>
+</footer>

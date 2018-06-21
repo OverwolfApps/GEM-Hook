@@ -1,0 +1,258 @@
+body {
+	background: #111;
+	color: #eee;
+}
+input[type=text], input[type=url], input[type=number], select {
+	width: 100%;
+	box-sizing: border-box;
+	background: transparent;
+	border: 1px solid #333;
+}
+input[type=text], input[type=url], input[type=number] {
+	padding: 1px 4px;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+option, optgroup {
+	background: #111;
+}
+input.ng-touched.ng-invalid {
+	color: brown;
+	border-color: brown;
+}
+table.event-log th {
+	text-align: left;
+}
+ul > li:not(:last-child) {
+	margin-bottom: 5px;
+}
+ul[ng-messages] {
+	position: relative;
+	margin-top: 10px;
+	background: brown;
+	padding: 5px;
+}
+ul[ng-messages]::before {
+	position: absolute;
+	content: "▲";
+	top: -10px;
+	left: 5px;
+	color: brown;
+}
+li[ng-message] {
+	color: #eee;
+}
+nav {
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+nav a {
+	text-decoration: none;
+	padding: 10px;
+}
+nav a:hover {
+	background: brown;
+}
+p {
+	line-height: 1.4em;
+}
+#content {
+	overflow: hidden;
+	overflow-y: auto;
+}
+#footer {
+	padding-top: 10px;
+}
+.row .btn:not(:last-child) {
+	margin-right: 2px;
+}
+.row-right .btn:not(:first-child) {
+	margin-left: 2px;
+}
+.form-group {
+	margin-bottom: 10px;
+}
+.form-group h6 {
+	margin-bottom: 5px;
+}
+.form-group .form-group {
+	margin: 10px 0 0 10px;
+}
+.btn-group {
+	margin-top: 5px;
+}
+.btn {
+	background: brown;
+	padding: 10px;
+	border-bottom: 4px solid #822;
+}
+.hook-disabled {
+	text-decoration: line-through;
+}
+.variable:not(:last-child)::after {
+	content: ", ";
+}
+.replay {
+	margin-bottom: 10px;
+}
+.replay-image {
+	width: 100px;
+	height: 56px;
+	background: url(../images/loading.svg) no-repeat center center;
+}
+.replay-image img {
+	width: 100%;
+}
+.replay-info {
+	padding: 5px;
+}
+.legend {
+	margin-bottom: 10px;
+	border-bottom: 1px solid brown;
+	padding-bottom: 5px;
+}
+.small {
+	font-size: 0.8em;
+}
+
+/*
+* input range
+*/
+
+input[type=range] {
+	-webkit-appearance: none;
+	background: transparent;
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	top: -7px;
+	width: 18px;
+	height: 18px;
+	background: brown;
+	border-radius: 50%;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	position: relative;
+	background: #333;
+	height: 4px;
+	cursor: pointer;
+}
+
+/*
+*	animations
+*/
+
+*[ng-show]:not([no-anim]).ng-hide-remove, *[ng-hide]:not([no-anim]).ng-hide-remove {
+	transition: opacity ease-in 250ms;
+	opacity: 0;
+}
+*[ng-show]:not([no-anim]).ng-hide-remove.ng-hide-remove-active, *[ng-hide]:not([no-anim]).ng-hide-remove.ng-hide-remove-active {
+	opacity: 1;
+}
+*[ng-repeat]:not([no-anim]).ng-enter, *[ng-if]:not([no-anim]).ng-enter, *[ng-switch-when]:not([no-anim]).ng-enter {
+	transition: opacity ease-in 250ms;
+	opacity: 0;
+}
+*[ng-repeat]:not([no-anim]).ng-enter-active, *[ng-if]:not([no-anim]).ng-enter-active, *[ng-switch-when]:not([no-anim]).ng-enter-active {
+	opacity: 1;
+}
+
+/*
+*	ionRangeSlider
+*/
+
+.irs-line {
+	background: #333;
+	border: none;
+	height: 4px;
+}
+.irs-bar {
+	background: brown;
+	border: none;
+	height: 4px;
+}
+.irs-from, .irs-to, .irs-single {
+	background: brown;
+}
+.irs-slider {
+	width: 18px;
+	height: 18px;
+}
+.irs-min, .irs-max {
+	color: #aaa;
+	background: none;
+}
+
+/*
+*	tooltip
+*/
+
+.tooltip {
+	position: absolute;
+	background: brown;
+	padding: 7px 10px;
+	max-width: 250px;
+	color: #eee;
+}
+.tooltip::before {
+	position: absolute;
+	content: "▲";
+	top: -10px;
+	left: 5px;
+	color: brown;
+}
+
+/*
+*	scrollbar
+*/
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 14px;
+}
+::-webkit-scrollbar-thumb {
+	background-clip: padding-box;
+	background-color: brown;
+	border-left: 10px solid transparent;
+}
+
+/*
+*	color-picker overrides
+*/
+
+.color-picker-wrapper .color-picker-input-wrapper {
+	width: 100%;
+}
+.color-picker-input {
+	text-transform: uppercase;
+}
+
+/*
+*	sweet alerts
+*/
+
+.sweet-alert {
+	background: #111;
+	border: 1px solid #333;
+}
+.sweet-alert p {
+	color: #eee;
+}
+.sweet-alert .sa-error-container {
+	background: #222;
+}
+.sweet-alert button.cancel {
+	background: #222;
+}
+.sweet-alert button.cancel:hover {
+	background: #222;
+}
+.sweet-alert button.cancel:active {
+	background: #222;
+}
+.sweet-alert button.cancel:focus {
+	box-shadow: none !important;
+}

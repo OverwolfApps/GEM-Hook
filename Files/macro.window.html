@@ -1,107 +1,100 @@
 <!DOCTYPE html>
 <html ng-app="gemApp">
 <head>
-	<meta charset="UTF-8">
-	<title>GEM - Macros</title>
+	<meta charset="utf-8">
+	<title>GEM - Lighting Macros</title>
 
-	<link rel="stylesheet" href="assets/css/angularjs-color-picker.min.css">
 	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/flex.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-	<link themer-link>
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/angularjs-color-picker.min.css">
+	<link rel="stylesheet" href="assets/css/sweetalert.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
 	<style>
-		#keyboardWrapper {
-			margin: 20px 0;
-		}
 		#keyboardContainer {
 			position: relative;
-			width: 947px;
-			height: 326px;
+			width: 568px;
+			height: 196px;
 		}
 		#keyboardContainer img {
 			position: absolute;
 			top: 0;
 		}
 		#keyboardKeys {
-			margin-top: 64px;
-			margin-left: 18px;
+			margin-top: 38px;
+			margin-left: 10px;
 		}
 		.keyboard-row {
-			margin-bottom: 13px;
+			margin-bottom: 6px;
 		}
 		.keyboard-row:first-child {
-			margin-bottom: 24px;
+			margin-bottom: 12px;
 		}
 		.keyboard-key {
 			display: inline-block;
-			width: 24px;
-			height: 26px;
-			margin-right: 17px;
+			width: 16px;
+			height: 17px;
+			margin-right: 8.5px;
 			background-color: #000;
 		}
 		.ESC {
-			margin-right: 44px;
+			margin-right: 24px;
 		}
 		.F4, .F8 {
-			margin-right: 45px;
+			margin-right: 26px;
 		}
 		.CAPS_LOCK {
-			margin-right: 27px;
+			margin-right: 16px;
 		}
 		.ENTER {
-			margin-right: 167px;
+			margin-right: 100px;
 		}
 		.LEFT_CONTROL {
-			margin-right: 18px;
+			margin-right: 9px;
 		}
 		.RIGHT_CONTROL {
-			margin-right: 33px;
+			margin-right: 18px;
 		}
 		.ARROW_RIGHT, .F12, .BACKSPACE, .PAGE_UP, .PAGE_DOWN, .BACKSLASH {
-			margin-right: 30px;
+			margin-right: 18px;
 		}
 		.RIGHT_SHIFT, .ARROW_UP {
-			margin-right: 71px;
+			margin-right: 42px;
 		}
 		.TAB, .CAPS_LOCK, .LEFT_CONTROL, .RIGHT_CONTROL, .BACKSLASH {
-			width: 45px;
+			width: 28px;
 		}
 		.SPACE {
-			width: 221px;
+			width: 133px;
 		}
 		.BACKSPACE, .NUM_ZERO {
-			width: 65px;
+			width: 40px;
 		}
 		.LEFT_WINDOWS, .LEFT_ALT, .RIGHT_ALT, .APPLICATION_SELECT, .RIGHT_WINDOWS {
-			width: 33px;
+			width: 22px;
 		}
 		.RIGHT_SHIFT {
-			width: 96px;
+			width: 60px;
 		}
 		.LEFT_SHIFT, .ENTER {
-			width: 75px;
+			width: 46px;
 		}
 		.NUM_ENTER, .NUM_PLUS {
 			position: absolute;
-			left: 907px;
-			height: 65px;
+			left: 543px;
+			height: 43px;
 		}
-
 		.state.active {
 			background: rgba(100, 100, 100, 0.1);
 		}
-
-		/*
-		*	UI SELECTABLE
-		*/
 		.ui-selectable-helper {
 			border-color: #fff;
 		}
 		.ui-selected::before {
 			position: absolute;
-			width: 24px;
-			height: 26px;
+			width: 16px;
+			height: 17px;
 			z-index: 999;
 			content: ' ';
 			box-sizing: border-box;
@@ -109,51 +102,268 @@
 			box-shadow: 0 0 15px #fff;
 		}
 		.ui-selected.TAB::before, .ui-selected.CAPS_LOCK::before, .ui-selected.LEFT_CONTROL::before, .ui-selected.RIGHT_CONTROL::before, .ui-selected.BACKSLASH::before {
-			width: 45px;
+			width: 28px;
 		}
 		.ui-selected.SPACE::before {
-			width: 221px;
+			width: 133px;
 		}
 		.ui-selected.BACKSPACE::before, .ui-selected.NUM_ZERO::before {
-			width: 65px;
+			width: 40px;
 		}
 		.ui-selected.LEFT_WINDOWS::before, .ui-selected.LEFT_ALT::before, .ui-selected.RIGHT_ALT::before, .ui-selected.APPLICATION_SELECT::before, .ui-selected.RIGHT_WINDOWS::before {
-			width: 33px;
+			width: 22px;
 		}
 		.ui-selected.RIGHT_SHIFT::before {
-			width: 96px;
+			width: 60px;
 		}
 		.ui-selected.LEFT_SHIFT::before, .ui-selected.ENTER::before {
-			width: 75px;
+			width: 46px;
 		}
 		.ui-selected.NUM_ENTER::before, .ui-selected.NUM_PLUS::before {
-			height: 68px;
+			height: 43px;
 		}
 	</style>
 
-	<script src="libs/q.js"></script>
-	<script src="libs/jquery.min.js"></script>
-	<script src="libs/jquery-ui.min.js"></script>
-	<script src="libs/angular.min.js"></script>
-	<script src="libs/angular-animate.min.js"></script>
-	<script src="libs/themer.js"></script>
-	<script src="libs/ngStorage.min.js"></script>
-	<script src="libs/tinycolor-min.js"></script>
-	<script src="libs/angularjs-color-picker.min.js"></script>
+	<script src="vendor/q.js"></script>
+	<script src="vendor/jquery.min.js"></script>
+	<script src="vendor/jquery-ui.min.js"></script>
+	<script src="vendor/angular.min.js"></script>
+	<script src="vendor/angular-animate.min.js"></script>
+	<script src="vendor/ngStorage.min.js"></script>
+	<script src="vendor/tinycolor-min.js"></script>
+	<script src="vendor/angularjs-color-picker.min.js"></script>
+	<script src="vendor/sweetalert.min.js"></script>
 
-	<script src="app/macro/module.js"></script>
-	<script src="app/macro/controllers/main.controller.js"></script>
+	<script>
+		angular
+			.module('gemApp', ['ngAnimate', 'ngStorage', 'color.picker'])
+			.config(function($provide) {
+				$provide.decorator('ColorPickerOptions', function($delegate) {
+					var options = angular.copy($delegate);
+					options.alpha = false;
+					options.format = 'rgb';
+					options.swatchBootstrap = false;
+					return options;
+				});
+			})
+			.directive('info', function() {
+				return {
+					restrict: 'E',
+					scope: {
+						text: '='
+					},
+					replace: true,
+					template: '<i class="fa fa-question-circle fa-fw" ng-click="alert()"></i>',
+					link: function(scope, element, attrs, $transclude) {
+						scope.alert = function() {
+							swal({
+								title: '',
+								text: scope.text,
+								type: 'info',
+								confirmButtonColor: '#a52a2a'
+							});
+						};
+					}
+				};
+			})
+			.directive('selectable', function($parse) {
+				return function(scope, element, attrs) {
+					var fn = $parse(attrs.selectable);
 
-	<script src="app/macro/directives/selectable.js"></script>
-	<script src="app/shared/directives/header.js"></script>
+					element.selectable({
+						filter: '.keyboard-key',
+						stop: function(event, ui) {
+							var elementArr = [];
+
+							$('.ui-selected', this).each(function() {
+								elementArr.push(this);
+							});
+
+							fn(scope, { $keys: elementArr });
+						}
+					});
+				};
+			})
+			.controller('MainCtrl', function($scope, $localStorage) {
+
+				var usKeyboard = [
+					["ESC", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "PRINT_SCREEN", "SCROLL_LOCK", "PAUSE_BREAK"],
+					["TILDE", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "ZERO", "MINUS", "EQUALS", "BACKSPACE", "INSERT", "HOME", "PAGE_UP", "NUM_LOCK", "NUM_SLASH", "NUM_ASTERISK", "NUM_MINUS"],
+					["TAB", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "OPEN_BRACKET", "CLOSE_BRACKET", "BACKSLASH", "KEYBOARD_DELETE", "END", "PAGE_DOWN", "NUM_SEVEN", "NUM_EIGHT", "NUM_NINE", "NUM_PLUS"],
+					["CAPS_LOCK", "A", "S", "D", "F", "G", "H", "J", "K", "L", "SEMICOLON", "APOSTROPHE", "ENTER", "NUM_FOUR", "NUM_FIVE", "NUM_SIX"],
+					["LEFT_SHIFT", "Z", "X", "C", "V", "B", "N", "M", "COMMA", "PERIOD", "FORWARD_SLASH", "RIGHT_SHIFT", "ARROW_UP", "NUM_ONE",	"NUM_TWO", "NUM_THREE",	"NUM_ENTER"],
+					["LEFT_CONTROL", "LEFT_WINDOWS", "LEFT_ALT", "SPACE", "RIGHT_ALT",	"RIGHT_WINDOWS", "APPLICATION_SELECT", "RIGHT_CONTROL", "ARROW_LEFT", "ARROW_DOWN",	"ARROW_RIGHT", "NUM_ZERO", "NUM_PERIOD"]
+				];
+				var baseKeys = [];
+
+				$scope.macros = angular.copy($localStorage.macros);
+				$scope.selectedStateIndex = 0;
+				$scope.properties = {};
+				$scope.selectedKeys = [];
+
+				$scope.infos = {
+					transparent: 'When set to true, the black keys will not be processed for this state.',
+					condition: '-[ADVANCED]-\nA valid javascript statement. If the result of the statement is true, the key will be processed. You can use variables the same way as with the notifications, using double curly braces.\n\nExamples:\n"{{bomb}}" == "exploded"\n{{weapon_current_ammo}} <= 5\n\nTo learn more visit the forums at forums.overwolf.com.'
+				};
+
+				$scope.$watch('selectedKeys', function(newValue, oldValue) {
+					if (newValue.length) {
+						var names = newValue.map(function(key) {
+							return key.name;
+						});
+						var properties = angular.copy(newValue[0]);
+						properties.name = names.join(', ');
+						$scope.properties = properties;
+					}
+				});
+
+				$scope.$watch('properties', function(newValue, oldValue) {
+					var properties = angular.copy($scope.properties);
+					delete properties.name;
+					$scope.selectedKeys.forEach(function(key, index, array) {
+						angular.extend(key, properties);
+					});
+				}, true);
+
+				$scope.colorPickerEventApi = {
+					onBlur: function(api, color, $event) {
+						$scope.properties.color = tinycolor($scope.properties.color).isValid() ? $scope.properties.color : 'rgb(0, 0, 0)';
+						$scope.properties.finishColor = tinycolor($scope.properties.finishColor).isValid() ? $scope.properties.finishColor : 'rgb(0, 0, 0)';
+					}
+				};
+
+				$scope.addMacro = function() {
+					var id = getID();
+					var index = $scope.macros.push({
+						id: id,
+						name: 'New macro ' + id,
+						states: []
+					});
+					$scope.selectedMacro = $scope.macros[index - 1];
+					$scope.addState();
+					deselectKeys();
+				};
+
+				$scope.changeName = function() {
+					swal({
+						title: 'Name',
+						text: '',
+						type: "input",
+						showCancelButton: true,
+						confirmButtonColor: '#a52a2a',
+						inputValue: $scope.selectedMacro.name
+					}, function(inputValue) {
+						if (inputValue) {
+							$scope.selectedMacro.name = inputValue;
+							$scope.$digest();
+						}
+					});
+				};
+
+				$scope.deleteMacro = function() {
+					var index = $scope.macros.indexOf($scope.selectedMacro);
+					if (index !== -1) {
+						$scope.macros.splice(index, 1);
+						$scope.selectedMacro = undefined;
+					}
+				};
+
+				$scope.addState = function() {
+					var index = $scope.selectedMacro.states.push({
+						duration: 2000,
+						transparent: true,
+						data: angular.copy(baseKeys)
+					});
+					$scope.selectedStateIndex = index - 1;
+					deselectKeys();
+				};
+
+				$scope.selectState = function(index) {
+					if ($scope.selectedStateIndex !== index) {
+						$scope.selectedStateIndex = index;
+						deselectKeys();
+					}
+				};
+
+				$scope.removeState = function(index) {
+					$scope.selectedMacro.states.splice(index, 1);
+					$scope.selectedStateIndex = (index - 1 > 0) ? index - 1 : 0;
+					if ($scope.selectedStateIndex === index) deselectKeys();
+				};
+
+				$scope.reset = function() {
+					angular.extend($scope.properties, {
+						condition: '',
+						effect: 'Fixed',
+						color: 'rgb(0, 0, 0)',
+						finishColor: 'rgb(0, 0, 0)',
+						interval: '150'
+					});
+				};
+
+				$scope.keysSelected = function(keysArr) {
+					$scope.selectedKeys = keysArr.map(function(key) {
+						return angular.element(key).scope().key;
+					});
+					$scope.$digest();
+				};
+
+				$scope.save = function() {
+					$localStorage.macros = $scope.macros;
+					$localStorage.$apply();
+					$scope.closeWindow();
+				};
+
+				$scope.closeWindow = function() {
+					overwolf.windows.close('MacroWindow', function() {});
+				};
+
+				function getID() {
+					var values = [];
+					$scope.macros.forEach(function(macro) {
+						values.push(macro.id);
+					});
+					return (values.length ? (Math.max.apply(null, values) + 1) : 0);
+				}
+
+				function deselectKeys() {
+					$scope.selectedKeys = [];
+				}
+
+				function initBaseKeys() {
+					usKeyboard.forEach(function(row, rowIndex) {
+						baseKeys[rowIndex] = [];
+						row.forEach(function(key, keyIndex) {
+							baseKeys[rowIndex][keyIndex] = {
+								name: usKeyboard[rowIndex][keyIndex],
+								condition: '',
+								effect: 'Fixed',
+								color: 'rgb(0, 0, 0)',
+								finishColor: 'rgb(0, 0, 0)',
+								interval: '150'
+							};
+						});
+					});
+				}
+
+				initBaseKeys();
+
+		});
+
+	</script>
+
 	<script src="app/shared/directives/footer.js"></script>
 	<script src="app/shared/directives/checkbox.js"></script>
-	<script src="app/shared/directives/info.js"></script>
 </head>
-<body class="column" ng-controller="MainController">
-	<header title="GEM - Macros"></header>
-	<div id="content" class="grow">
-		<div id="keyboardWrapper" class="row-center" selectable="keysSelected($keys)">
+<body class="column section" style="border-top: 1px solid #333; padding: 10px" ng-controller="MainCtrl">
+	<div id="content" class="column grow">
+		<div class="form-group">
+			<h6>Device</h6>
+			<select>
+				<option>G810 Orion Spectrum RGB Mechanical Gaming Keyboard</option>
+			</select>
+		</div>
+		<div class="form-group row-center" selectable="keysSelected($keys)">
 			<div id="keyboardContainer" class="no-shrink">
 				<div id="keyboardKeys">
 					<div class="keyboard-row" ng-repeat="row in selectedMacro.states[selectedStateIndex].data" no-anim>
@@ -166,61 +376,57 @@
 		<div class="row">
 			<div class="column half">
 				<div class="form-group">
-					<h4>Macro</h4>
+					<h6>Macro</h6>
 					<select ng-model="selectedMacro" ng-options="macro.name for macro in macros"></select>
-					<div class="btn-group">
-						<button class="btn" ng-click="addMacro()"><i class="fa fa-plus fa-fw" ></i></button>
-						<button class="btn" ng-click="changeName()" ng-disabled="!selectedMacro"><i class="fa fa-pencil fa-fw" ></i></button>
-						<button class="btn" ng-click="deleteMacro()" ng-disabled="!selectedMacro"><i class="fa fa-trash fa-fw" ></i></button>
+					<div class="btn-group row">
+						<i class="btn fa fa-plus fa-fw" ng-click="addMacro()"></i>
+						<i class="btn fa fa-pencil fa-fw" ng-click="changeName()" ng-disabled="!selectedMacro"></i>
+						<i class="btn fa fa-trash fa-fw" ng-click="deleteMacro()" ng-disabled="!selectedMacro"></i>
 					</div>
 				</div>
-				<div class="column grow" ng-if="selectedMacro">
-					<div class="form-group grow">
-						<table>
-							<thead>
-								<tr>
-									<th>Index</th>
-									<th>Duration (ms)</info></th>
-									<th>Transparent <info text="infos['transparent']"></info></th>
-									<th>Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="state" ng-class="{active: selectedStateIndex === $index}" ng-repeat="state in selectedMacro.states track by $index" ng-click="selectState($index)">
-									<td style="text-align: right" ng-bind="$index"></td>
-									<td>
-										<input type="number" min="0.1" required ng-model="state.duration">
-									</td>
-									<td>
-										<checkbox class="row-center" ng-model="state.transparent"></checkbox>
-									</td>
-									<td style="text-align: center">
-										<i class="fa fa-trash" ng-click="removeState($index)"></i>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="row-right">
-						<div class="btn-group">
-							<button class="btn" ng-click="addState()"><i class="fa fa-plus fa-fw"></i> Add state</button>
-						</div>
+				<div class="form-group" ng-if="selectedMacro">
+					<table>
+						<thead>
+							<tr>
+								<th>Index</th>
+								<th>Duration (ms)</th>
+								<th>Transparent <info text="infos['transparent']"></info></th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="state" ng-class="{active: selectedStateIndex === $index}" ng-repeat="state in selectedMacro.states track by $index" ng-click="selectState($index)">
+								<td style="text-align: right" ng-bind="$index"></td>
+								<td>
+									<input type="number" style="text-align: right" min="0.1" required ng-model="state.duration">
+								</td>
+								<td>
+									<checkbox class="row-center" ng-model="state.transparent"></checkbox>
+								</td>
+								<td style="text-align: center">
+									<i class="fa fa-trash" ng-click="removeState($index)"></i>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn-group row">
+						<button class="btn" ng-click="addState()"><i class="fa fa-plus fa-fw"></i> Add state</button>
 					</div>
 				</div>
 			</div>
 			<div class="column half">
 				<div class="form-group" ng-if="selectedMacro.states.length && selectedKeys.length">
-					<h4>Properties</h4>
+					<h6>Properties</h6>
 					<div class="form-group">
-						<h4>Name</h4>
+						<h6>Name</h6>
 						<input type="text" readonly ng-model="properties.name">
 					</div>
 					<div class="form-group">
-						<h4>Condition <info text="infos['condition']"></info></h4>
+						<h6>Condition <info text="infos['condition']"></info></h6>
 						<input type="text" ng-model="properties.condition">
 					</div>
 					<div class="form-group">
-						<h4>Effect</h4>
+						<h6>Effect</h6>
 						<select ng-model="properties.effect">
 							<option>Fixed</option>
 							<option>Flash</option>
@@ -228,15 +434,15 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<h4>Color</h4>
+						<h6>Color</h6>
 						<color-picker ng-model="properties.color" event-api="colorPickerEventApi"></color-picker>
 					</div>
 					<div class="form-group" ng-if="properties.effect === 'Pulse'">
-						<h4>Finish color</h4>
+						<h6>Finish color</h6>
 						<color-picker ng-model="properties.finishColor" event-api="colorPickerEventApi"></color-picker>
 					</div>
 					<div class="form-group" ng-if="properties.effect === 'Flash'">
-						<h4>Speed</h4>
+						<h6>Speed</h6>
 						<select ng-model="properties.interval">
 							<option value="250">Slower</option>
 							<option value="200">Slow</option>
@@ -245,15 +451,16 @@
 							<option value="50">Faster</option>
 						</select>
 					</div>
-					<div class="btn-group">
+					<div class="form-group">
 						<button class="btn" ng-click="reset()">Reset</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<footer>
-		<button class="btn" ng-click="save()">Save</button>
-	</footer>
+	<div id="footer" class="column column-items-stretch no-shrink">
+		<button class="btn" ng-click="save()"><i class="fa fa-floppy-o fa-fw"></i> Save</button>
+		<button class="btn" ng-click="closeWindow()">Close</button>
+	</div>
 </body>
 </html>

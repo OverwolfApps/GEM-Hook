@@ -1,0 +1,4106 @@
+[
+	{
+		"id": 8134,
+		"name": "SMITE",
+		"events": [
+			{
+				"id": 0,
+				"name": "player death",
+				"comment": "Display your kills",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playername",
+						"info": "Deadguy"
+					},
+					{
+						"id": 1,
+						"name": "killername",
+						"info": "yourname"
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "death",
+				"comment": "Display your deaths",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playername",
+						"info": "yourname"
+					},
+					{
+						"id": 1,
+						"name": "killername",
+						"info": "XkillerX"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 7784,
+		"name": "Warface",
+		"events": [
+			{
+				"id": 0,
+				"name": "kill",
+				"mode": "ALL",
+				"comment": "Player killed an enemy"
+			},
+			{
+				"id": 1,
+				"name": "kill_in_slide",
+				"mode": "ALL",
+				"comment": "Player killed enemy while being in slide"
+			},
+			{
+				"id": 2,
+				"name": "kill_headshot",
+				"mode": "ALL",
+				"comment": "Player made a headshot"
+			},
+			{
+				"id": 3,
+				"name": "kill_melee",
+				"mode": "ALL",
+				"comment": "Player made a melee kill"
+			},
+			{
+				"id": 4,
+				"name": "kill_grenade",
+				"mode": "ALL",
+				"comment": "Player made a grenade kill"
+			},
+			{
+				"id": 5,
+				"name": "teammate_protected",
+				"mode": "PVE",
+				"comment": "Player saved teammate from shield bearer or specop AI"
+			},
+			{
+				"id": 6,
+				"name": "protected_by_teammate",
+				"mode": "PVE",
+				"comment": "Player saved by teammate from shield bearer or specop AI"
+			},
+			{
+				"id": 7,
+				"name": "ctf_flag_pickup",
+				"mode": "PVP/CTF",
+				"comment": "Attacker picked up the flag"
+			},
+			{
+				"id": 8,
+				"name": "ctf_flag_drop",
+				"mode": "PVP/CTF",
+				"comment": "Flag dropped by attackers"
+			},
+			{
+				"id": 9,
+				"name": "ctf_flag_return",
+				"mode": "PVP/CTF",
+				"comment": "Flag returned to base by defenders"
+			},
+			{
+				"id": 10,
+				"name": "ptb_bomb_plant",
+				"mode": "PVP/PTB",
+				"comment": "Bomb was planted"
+			},
+			{
+				"id": 11,
+				"name": "ptb_bomb_defuse",
+				"mode": "PVP/PTB",
+				"comment": "Bomb was defused"
+			},
+			{
+				"id": 12,
+				"name": "ptb_bomb_pickup",
+				"mode": "PVP/PTB",
+				"comment": "Player team picked up the bomb"
+			},
+			{
+				"id": 13,
+				"name": "ptb_bomb_drop",
+				"mode": "PVP/PTB",
+				"comment": "Player team dropped the bomb"
+			},
+			{
+				"id": 14,
+				"name": "ptb_round_win_bomb_exploded",
+				"mode": "PVP/PTB",
+				"comment": "Player team won the round by exploding the bomb"
+			},
+			{
+				"id": 15,
+				"name": "ptb_round_loose_bomb_exploded",
+				"mode": "PVP/PTB",
+				"comment": "Player team lost the round by exploding the bomb"
+			},
+			{
+				"id": 16,
+				"name": "dmn_cp_1_captured_our_team",
+				"mode": "PVP/DMN",
+				"comment": "Player team captured A point"
+			},
+			{
+				"id": 17,
+				"name": "dmn_cp_2_captured_our_team",
+				"mode": "PVP/DMN",
+				"comment": "Player team captured B point"
+			},
+			{
+				"id": 18,
+				"name": "dmn_cp_3_captured_our_team",
+				"mode": "PVP/DMN",
+				"comment": "Player team captured C point"
+			},
+			{
+				"id": 19,
+				"name": "dmn_cp_all_captured_our_team",
+				"mode": "PVP/DMN",
+				"comment": "Player team captured all points"
+			},
+			{
+				"id": 20,
+				"name": "objective_completed_core1att",
+				"mode": "PVP/STM",
+				"comment": "First core was captured"
+			},
+			{
+				"id": 21,
+				"name": "objective_completed_core2att",
+				"mode": "PVP/STM",
+				"comment": "Second core was captured"
+			},
+			{
+				"id": 22,
+				"name": "stm_round_att_all_cores_captured",
+				"mode": "PVP/STM",
+				"comment": "Player team captured all cores"
+			},
+			{
+				"id": 23,
+				"name": "stm_round_def_all_cores_captured",
+				"mode": "PVP/STM",
+				"comment": "All your cores were captured"
+			},
+			{
+				"id": 24,
+				"name": "achievement_gained",
+				"mode": "ALL",
+				"comment": "Player gained an achievement"
+			},
+			{
+				"id": 25,
+				"name": "headshots_in_a_row_2",
+				"mode": "ALL",
+				"comment": "Player made 2 headshots in a row"
+			},
+			{
+				"id": 26,
+				"name": "headshots_in_a_row_3",
+				"mode": "ALL",
+				"comment": "Player made 3 headshots in a row"
+			},
+			{
+				"id": 27,
+				"name": "headshots_in_a_row_4",
+				"mode": "ALL",
+				"comment": "Player made 4 headshots in a row"
+			},
+			{
+				"id": 28,
+				"name": "headshots_in_a_row_5",
+				"mode": "ALL",
+				"comment": "Player made 5 headshots in a row"
+			},
+			{
+				"id": 29,
+				"name": "grenade_kills_in_a_row_1",
+				"mode": "ALL",
+				"comment": "Player made 2 grenade kills in a row"
+			},
+			{
+				"id": 30,
+				"name": "grenade_kills_in_a_row_2",
+				"mode": "ALL",
+				"comment": "Player made 3 grenade kills in a row"
+			},
+			{
+				"id": 31,
+				"name": "grenade_kills_in_a_row_3",
+				"mode": "ALL",
+				"comment": "Player made 5 grenade kills in a row"
+			},
+			{
+				"id": 32,
+				"name": "melee_kills_in_a_row_1",
+				"mode": "ALL",
+				"comment": "Player made 2 melee kills in a row"
+			},
+			{
+				"id": 33,
+				"name": "melee_kills_in_a_row_2",
+				"mode": "ALL",
+				"comment": "Player made 3 melee kills in a row"
+			},
+			{
+				"id": 34,
+				"name": "melee_kills_in_a_row_3",
+				"mode": "ALL",
+				"comment": "Player made 5 melee kills in a row"
+			},
+			{
+				"id": 35,
+				"name": "defibrillator_kill",
+				"mode": "ALL",
+				"comment": "Player made a kill using a defibrillator"
+			},
+			{
+				"id": 36,
+				"name": "in_knock_back_kill",
+				"mode": "ALL",
+				"comment": "Player made a kill while being in knock back"
+			},
+			{
+				"id": 37,
+				"name": "claymore_kill",
+				"mode": "ALL",
+				"comment": "Player made 2 kills using claymore"
+			},
+			{
+				"id": 38,
+				"name": "two_at_once_kill",
+				"mode": "ALL",
+				"comment": "Player made 2 kills with one bullet"
+			},
+			{
+				"id": 39,
+				"name": "double_kill",
+				"mode": "PVP",
+				"comment": "Player made 2 kills in a row"
+			},
+			{
+				"id": 40,
+				"name": "pvp_triple_kill",
+				"mode": "PVP",
+				"comment": "Player made 3 kills in a row"
+			},
+			{
+				"id": 41,
+				"name": "pvp_flag_kill",
+				"mode": "PVP/CTF",
+				"comment": "Player with flag killed enemy"
+			},
+			{
+				"id": 42,
+				"name": "pvp_flag_returned",
+				"mode": "PVP/CTF",
+				"comment": "Player returned flag"
+			},
+			{
+				"id": 43,
+				"name": "dmn_defend_kills_1",
+				"mode": "PVP/DMN",
+				"comment": "Player was on his core and killed enemy"
+			},
+			{
+				"id": 44,
+				"name": "dmn_attack_kills_1",
+				"mode": "PVP/DMN",
+				"comment": "Player killed enemy on enemy core"
+			},
+			{
+				"id": 45,
+				"name": "sniper_down",
+				"mode": "ALL",
+				"comment": "Player killed a sniper"
+			},
+			{
+				"id": 46,
+				"name": "shield_bearer_down",
+				"mode": "ALL",
+				"comment": "Player killed a shield bearer"
+			}
+		]
+	},
+	{
+		"id": 10480,
+		"name": "Robocraft",
+		"events": [
+			{
+				"id": 0,
+				"name": "game_won",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "game_lost",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "player_killed",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playerKilled"
+					},
+					{
+						"id": 1,
+						"name": "byPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 3,
+				"name": "spotted_enemy",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "enemySpotted"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 4,
+				"name": "being_spotted",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "Username"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "my_base_under_attack",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 6,
+				"name": "enemy_base_under_attack",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 7,
+				"name": "my_base_destroyed",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 8,
+				"name": "enemy_base_destroyed",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 9,
+				"name": "my_base_near_destroy",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 10,
+				"name": "enemy_base_near_destroy",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 11,
+				"name": "start_healing",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfHeal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "toPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 12,
+				"name": "start_getting_healed",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfHeal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "byPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 13,
+				"name": "stop_healing",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "toPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 14,
+				"name": "stop_getting_healed",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 15,
+				"name": "player_near_to_enemy",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "player"
+					},
+					{
+						"id": 1,
+						"name": "nearTo"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 16,
+				"name": "railGun_ready",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 17,
+				"name": "railGun_manual_reload",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 18,
+				"name": "plasmaCannon_ready",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 19,
+				"name": "damage_taken",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfDamage",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "byPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 20,
+				"name": "doing_damage",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfDamage",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "toPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 21,
+				"name": "player_near_death",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "remainingLife",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 22,
+				"name": "enemy_near_death",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "remainingLife",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 23,
+				"name": "player_defending_base",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playerDefending"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 24,
+				"name": "player_protecting_ally",
+				"mode": "ALL",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playerProtecting"
+					},
+					{
+						"id": 1,
+						"name": "allyProtected"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 25,
+				"name": "cpu_damage_taken",
+				"mode": "ALL",
+				"comment": "when at least 1 cube is destroyed",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfCpuDamage",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "byPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 26,
+				"name": "doing_cpu_damage",
+				"mode": "ALL",
+				"comment": "when at least 1 cube is destroyed",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfCpuDamage",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "toPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 27,
+				"name": "battle_left",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 28,
+				"name": "my_base_under_attack",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 29,
+				"name": "enemy_base_under_attack",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 30,
+				"name": "enemy_base_under_attack",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 31,
+				"name": "my_base_destroyed",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 32,
+				"name": "enemy_base_destroyed",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 33,
+				"name": "my_base_near_destroy",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 34,
+				"name": "enemy_base_near_destroy",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 35,
+				"name": "start_healing",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfHeal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "toPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 36,
+				"name": "start_getting_healed",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "amouthOfHeal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "byPlayer"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 37,
+				"name": "stop_healing",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "toPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 38,
+				"name": "stop_getting_healed",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "byPlayer"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 39,
+				"name": "player_near_to_enemy",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "player"
+					},
+					{
+						"id": 1,
+						"name": "nearTo"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 40,
+				"name": "player_defending_base",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playerDefending"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 41,
+				"name": "player_protecting_ally",
+				"mode": "Battle Arena",
+				"keys": [
+					{
+						"id": 0,
+						"name": "playerProtecting"
+					},
+					{
+						"id": 1,
+						"name": "allyProtected"
+					},
+					{
+						"id": 2,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 42,
+				"name": "self_destruct",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 43,
+				"name": "my_base_being_captured",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 44,
+				"name": "enemy_base_being_captured",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 45,
+				"name": "my_base_captured",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 46,
+				"name": "enemy_base_captured",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 47,
+				"name": "my_base_near_to_be_captured",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 48,
+				"name": "enemy_base_near_to_be_captured",
+				"mode": "Team Deathmatch",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 49,
+				"name": "battle_left",
+				"mode": "The Pit",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 50,
+				"name": "you_become_leader",
+				"mode": "The Pit",
+				"keys": [
+					{
+						"id": 0,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 51,
+				"name": "player_becomes_leader",
+				"mode": "The Pit",
+				"keys": [
+					{
+						"id": 0,
+						"name": "newLeader"
+					},
+					{
+						"id": 1,
+						"name": "atTime",
+						"type": "number"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 7764,
+		"name": "CS:GO",
+		"events": [
+			{
+				"id": 0,
+				"name": "kill",
+				"comment": "Player has killed an enemy",
+				"keys": [
+					{
+						"id": 0,
+						"name": "totalKills",
+						"info": "Total kills for player in match",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "death",
+				"comment": "Player has died",
+				"keys": [
+					{
+						"id": 0,
+						"name": "totalDeaths",
+						"info": "Total deaths of player in match",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "assist",
+				"comment": "Player has assisted in killing an enemy",
+				"keys": [
+					{
+						"id": 0,
+						"name": "totalAssists",
+						"info": "Total assists for user it match",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 3,
+				"name": "headshot",
+				"comment": "Player has gained a killed with a headshot. Fired alongside kill event",
+				"keys": [
+					{
+						"id": 0,
+						"name": "headshotsInRound",
+						"info": "Total headshots for user in current round",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 4,
+				"name": "round_start",
+				"comment": "A new round has began",
+				"keys": [
+					{
+						"id": 0,
+						"name": "num_of_rounds",
+						"info": "Total number of rounds in current match",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "player_team",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "CT"
+							},
+							{
+								"id": 1,
+								"name": "T"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "match_start",
+				"comment": "A new match has started",
+				"keys": [
+					{
+						"id": 0,
+						"name": "player_team",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "CT"
+							},
+							{
+								"id": 1,
+								"name": "T"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 6,
+				"name": "team_round_win",
+				"comment": "A round has ended",
+				"keys": [
+					{
+						"id": 0,
+						"name": "winningTeam",
+						"info": "The team that won the round (CT/T)",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "CT"
+							},
+							{
+								"id": 1,
+								"name": "T"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "bomb",
+						"info": "Bomb status",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "exploded"
+							},
+							{
+								"id": 1,
+								"name": "defused"
+							},
+							{
+								"id": 2,
+								"name": "planted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 7,
+				"name": "bomb_planted",
+				"comment": "A bomb has been planted (by any player)"
+			},
+			{
+				"id": 8,
+				"name": "reloading",
+				"comment": "Player reloads his weapon",
+				"keys": [
+					{
+						"id": 0,
+						"name": "weapon_name",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 2,
+								"name": "weapon_hkp2000"
+							},
+							{
+								"id": 3,
+								"name": "weapon_usp_silencer"
+							},
+							{
+								"id": 4,
+								"name": "weapon_glock"
+							},
+							{
+								"id": 5,
+								"name": "weapon_elite",
+								"info": "Dual Berettas"
+							},
+							{
+								"id": 6,
+								"name": "weapon_p250"
+							},
+							{
+								"id": 7,
+								"name": "weapon_fiveseven"
+							},
+							{
+								"id": 8,
+								"name": "weapon_cz75a"
+							},
+							{
+								"id": 9,
+								"name": "weapon_tec9"
+							},
+							{
+								"id": 10,
+								"name": "weapon_deagle"
+							},
+							{
+								"id": 11,
+								"name": "weapon_revolver"
+							},
+							{
+								"id": 12,
+								"name": "weapon_nova"
+							},
+							{
+								"id": 13,
+								"name": "weapon_xm1014"
+							},
+							{
+								"id": 14,
+								"name": "weapon_mag7"
+							},
+							{
+								"id": 15,
+								"name": "weapon_sawedoff"
+							},
+							{
+								"id": 16,
+								"name": "weapon_m249"
+							},
+							{
+								"id": 17,
+								"name": "weapon_negev"
+							},
+							{
+								"id": 18,
+								"name": "weapon_mp9"
+							},
+							{
+								"id": 19,
+								"name": "weapon_mac10"
+							},
+							{
+								"id": 20,
+								"name": "weapon_mp7"
+							},
+							{
+								"id": 21,
+								"name": "weapon_ump45"
+							},
+							{
+								"id": 22,
+								"name": "weapon_p90"
+							},
+							{
+								"id": 23,
+								"name": "weapon_bizon"
+							},
+							{
+								"id": 24,
+								"name": "weapon_famas"
+							},
+							{
+								"id": 25,
+								"name": "weapon_galilar"
+							},
+							{
+								"id": 26,
+								"name": "weapon_m4a1"
+							},
+							{
+								"id": 27,
+								"name": "weapon_m4a1_silencer"
+							},
+							{
+								"id": 28,
+								"name": "weapon_ak47"
+							},
+							{
+								"id": 29,
+								"name": "weapon_ssg08"
+							},
+							{
+								"id": 30,
+								"name": "weapon_aug"
+							},
+							{
+								"id": 31,
+								"name": "weapon_sg556"
+							},
+							{
+								"id": 32,
+								"name": "weapon_awp"
+							},
+							{
+								"id": 33,
+								"name": "weapon_scar20"
+							},
+							{
+								"id": 34,
+								"name": "weapon_g3sg1"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "weapon_current_ammo",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "weapon_max_ammo",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "weapon_type",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 1,
+								"name": "Pistol"
+							},
+							{
+								"id": 2,
+								"name": "Shotgun"
+							},
+							{
+								"id": 3,
+								"name": "Machine Gun"
+							},
+							{
+								"id": 4,
+								"name": "Submachine Gun"
+							},
+							{
+								"id": 5,
+								"name": "Rifle"
+							},
+							{
+								"id": 6,
+								"name": "SniperRifle"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"name": "fired",
+				"comment": "Player fires his weapon",
+				"keys":  [
+					{
+						"id": 0,
+						"name": "weapon_name",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 2,
+								"name": "weapon_hkp2000"
+							},
+							{
+								"id": 3,
+								"name": "weapon_usp_silencer"
+							},
+							{
+								"id": 4,
+								"name": "weapon_glock"
+							},
+							{
+								"id": 5,
+								"name": "weapon_elite",
+								"info": "Dual Berettas"
+							},
+							{
+								"id": 6,
+								"name": "weapon_p250"
+							},
+							{
+								"id": 7,
+								"name": "weapon_fiveseven"
+							},
+							{
+								"id": 8,
+								"name": "weapon_cz75a"
+							},
+							{
+								"id": 9,
+								"name": "weapon_tec9"
+							},
+							{
+								"id": 10,
+								"name": "weapon_deagle"
+							},
+							{
+								"id": 11,
+								"name": "weapon_revolver"
+							},
+							{
+								"id": 12,
+								"name": "weapon_nova"
+							},
+							{
+								"id": 13,
+								"name": "weapon_xm1014"
+							},
+							{
+								"id": 14,
+								"name": "weapon_mag7"
+							},
+							{
+								"id": 15,
+								"name": "weapon_sawedoff"
+							},
+							{
+								"id": 16,
+								"name": "weapon_m249"
+							},
+							{
+								"id": 17,
+								"name": "weapon_negev"
+							},
+							{
+								"id": 18,
+								"name": "weapon_mp9"
+							},
+							{
+								"id": 19,
+								"name": "weapon_mac10"
+							},
+							{
+								"id": 20,
+								"name": "weapon_mp7"
+							},
+							{
+								"id": 21,
+								"name": "weapon_ump45"
+							},
+							{
+								"id": 22,
+								"name": "weapon_p90"
+							},
+							{
+								"id": 23,
+								"name": "weapon_bizon"
+							},
+							{
+								"id": 24,
+								"name": "weapon_famas"
+							},
+							{
+								"id": 25,
+								"name": "weapon_galilar"
+							},
+							{
+								"id": 26,
+								"name": "weapon_m4a1"
+							},
+							{
+								"id": 27,
+								"name": "weapon_m4a1_silencer"
+							},
+							{
+								"id": 28,
+								"name": "weapon_ak47"
+							},
+							{
+								"id": 29,
+								"name": "weapon_ssg08"
+							},
+							{
+								"id": 30,
+								"name": "weapon_aug"
+							},
+							{
+								"id": 31,
+								"name": "weapon_sg556"
+							},
+							{
+								"id": 32,
+								"name": "weapon_awp"
+							},
+							{
+								"id": 33,
+								"name": "weapon_scar20"
+							},
+							{
+								"id": 34,
+								"name": "weapon_g3sg1"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "weapon_current_ammo",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "weapon_max_ammo",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "weapon_type",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 1,
+								"name": "Pistol"
+							},
+							{
+								"id": 2,
+								"name": "Shotgun"
+							},
+							{
+								"id": 3,
+								"name": "Machine Gun"
+							},
+							{
+								"id": 4,
+								"name": "Submachine Gun"
+							},
+							{
+								"id": 5,
+								"name": "Rifle"
+							},
+							{
+								"id": 6,
+								"name": "SniperRifle"
+							},
+							{
+								"id": 7,
+								"name": "Grenade"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 10,
+				"name": "weapon_change",
+				"comment": "Player switches weapons",
+				"keys": [
+					{
+						"id": 0,
+						"name": "weapon_name",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "weapon_knife"
+							},
+							{
+								"id": 1,
+								"name": "weapon_knife_t"
+							},
+							{
+								"id": 2,
+								"name": "weapon_hkp2000"
+							},
+							{
+								"id": 3,
+								"name": "weapon_usp_silencer"
+							},
+							{
+								"id": 4,
+								"name": "weapon_glock"
+							},
+							{
+								"id": 5,
+								"name": "weapon_elite",
+								"info": "Dual Berettas"
+							},
+							{
+								"id": 6,
+								"name": "weapon_p250"
+							},
+							{
+								"id": 7,
+								"name": "weapon_fiveseven"
+							},
+							{
+								"id": 8,
+								"name": "weapon_cz75a"
+							},
+							{
+								"id": 9,
+								"name": "weapon_tec9"
+							},
+							{
+								"id": 10,
+								"name": "weapon_deagle"
+							},
+							{
+								"id": 11,
+								"name": "weapon_revolver"
+							},
+							{
+								"id": 12,
+								"name": "weapon_nova"
+							},
+							{
+								"id": 13,
+								"name": "weapon_xm1014"
+							},
+							{
+								"id": 14,
+								"name": "weapon_mag7"
+							},
+							{
+								"id": 15,
+								"name": "weapon_sawedoff"
+							},
+							{
+								"id": 16,
+								"name": "weapon_m249"
+							},
+							{
+								"id": 17,
+								"name": "weapon_negev"
+							},
+							{
+								"id": 18,
+								"name": "weapon_mp9"
+							},
+							{
+								"id": 19,
+								"name": "weapon_mac10"
+							},
+							{
+								"id": 20,
+								"name": "weapon_mp7"
+							},
+							{
+								"id": 21,
+								"name": "weapon_ump45"
+							},
+							{
+								"id": 22,
+								"name": "weapon_p90"
+							},
+							{
+								"id": 23,
+								"name": "weapon_bizon"
+							},
+							{
+								"id": 24,
+								"name": "weapon_famas"
+							},
+							{
+								"id": 25,
+								"name": "weapon_galilar"
+							},
+							{
+								"id": 26,
+								"name": "weapon_m4a1"
+							},
+							{
+								"id": 27,
+								"name": "weapon_m4a1_silencer"
+							},
+							{
+								"id": 28,
+								"name": "weapon_ak47"
+							},
+							{
+								"id": 29,
+								"name": "weapon_ssg08"
+							},
+							{
+								"id": 30,
+								"name": "weapon_aug"
+							},
+							{
+								"id": 31,
+								"name": "weapon_sg556"
+							},
+							{
+								"id": 32,
+								"name": "weapon_awp"
+							},
+							{
+								"id": 33,
+								"name": "weapon_scar20"
+							},
+							{
+								"id": 34,
+								"name": "weapon_g3sg1"
+							},
+							{
+								"id": 35,
+								"name": "weapon_incgrenade"
+							},
+							{
+								"id": 36,
+								"name": "weapon_decoy"
+							},
+							{
+								"id": 37,
+								"name": "weapon_flashbang"
+							},
+							{
+								"id": 38,
+								"name": "weapon_hegrenade"
+							},
+							{
+								"id": 39,
+								"name": "weapon_smokegrenade"
+							},
+							{
+								"id": 40,
+								"name": "weapon_c4"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "weapon_type",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "Knife"
+							},
+							{
+								"id": 1,
+								"name": "Pistol"
+							},
+							{
+								"id": 2,
+								"name": "Shotgun"
+							},
+							{
+								"id": 3,
+								"name": "Machine Gun"
+							},
+							{
+								"id": 4,
+								"name": "Submachine Gun"
+							},
+							{
+								"id": 5,
+								"name": "Rifle"
+							},
+							{
+								"id": 6,
+								"name": "SniperRifle"
+							},
+							{
+								"id": 7,
+								"name": "Grenade"
+							},
+							{
+								"id": 8,
+								"name": "C4"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 11,
+				"name": "weapon_acquired",
+				"comment": "Player acquires new weapon (either buy or picks up)",
+				"keys": [
+					{
+						"id": 0,
+						"name": "weapon_name",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 2,
+								"name": "weapon_hkp2000"
+							},
+							{
+								"id": 3,
+								"name": "weapon_usp_silencer"
+							},
+							{
+								"id": 4,
+								"name": "weapon_glock"
+							},
+							{
+								"id": 5,
+								"name": "weapon_elite",
+								"info": "Dual Berettas"
+							},
+							{
+								"id": 6,
+								"name": "weapon_p250"
+							},
+							{
+								"id": 7,
+								"name": "weapon_fiveseven"
+							},
+							{
+								"id": 8,
+								"name": "weapon_cz75a"
+							},
+							{
+								"id": 9,
+								"name": "weapon_tec9"
+							},
+							{
+								"id": 10,
+								"name": "weapon_deagle"
+							},
+							{
+								"id": 11,
+								"name": "weapon_revolver"
+							},
+							{
+								"id": 12,
+								"name": "weapon_nova"
+							},
+							{
+								"id": 13,
+								"name": "weapon_xm1014"
+							},
+							{
+								"id": 14,
+								"name": "weapon_mag7"
+							},
+							{
+								"id": 15,
+								"name": "weapon_sawedoff"
+							},
+							{
+								"id": 16,
+								"name": "weapon_m249"
+							},
+							{
+								"id": 17,
+								"name": "weapon_negev"
+							},
+							{
+								"id": 18,
+								"name": "weapon_mp9"
+							},
+							{
+								"id": 19,
+								"name": "weapon_mac10"
+							},
+							{
+								"id": 20,
+								"name": "weapon_mp7"
+							},
+							{
+								"id": 21,
+								"name": "weapon_ump45"
+							},
+							{
+								"id": 22,
+								"name": "weapon_p90"
+							},
+							{
+								"id": 23,
+								"name": "weapon_bizon"
+							},
+							{
+								"id": 24,
+								"name": "weapon_famas"
+							},
+							{
+								"id": 25,
+								"name": "weapon_galilar"
+							},
+							{
+								"id": 26,
+								"name": "weapon_m4a1"
+							},
+							{
+								"id": 27,
+								"name": "weapon_m4a1_silencer"
+							},
+							{
+								"id": 28,
+								"name": "weapon_ak47"
+							},
+							{
+								"id": 29,
+								"name": "weapon_ssg08"
+							},
+							{
+								"id": 30,
+								"name": "weapon_aug"
+							},
+							{
+								"id": 31,
+								"name": "weapon_sg556"
+							},
+							{
+								"id": 32,
+								"name": "weapon_awp"
+							},
+							{
+								"id": 33,
+								"name": "weapon_scar20"
+							},
+							{
+								"id": 34,
+								"name": "weapon_g3sg1"
+							},
+							{
+								"id": 35,
+								"name": "weapon_incgrenade"
+							},
+							{
+								"id": 36,
+								"name": "weapon_decoy"
+							},
+							{
+								"id": 37,
+								"name": "weapon_flashbang"
+							},
+							{
+								"id": 38,
+								"name": "weapon_hegrenade"
+							},
+							{
+								"id": 39,
+								"name": "weapon_smokegrenade"
+							},
+							{
+								"id": 40,
+								"name": "weapon_c4"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "weapon_type",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 1,
+								"name": "Pistol"
+							},
+							{
+								"id": 2,
+								"name": "Shotgun"
+							},
+							{
+								"id": 3,
+								"name": "Machine Gun"
+							},
+							{
+								"id": 4,
+								"name": "Submachine Gun"
+							},
+							{
+								"id": 5,
+								"name": "Rifle"
+							},
+							{
+								"id": 6,
+								"name": "SniperRifle"
+							},
+							{
+								"id": 7,
+								"name": "Grenade"
+							},
+							{
+								"id": 8,
+								"name": "C4"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"name": "match_end",
+				"comment": "Match was ended"
+			},
+			{
+				"id": 13,
+				"name": "bomb_change",
+				"comment": "Bomb state was changed",
+				"keys": [
+					{
+						"id": 0,
+						"name": "state",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "planted"
+							},
+							{
+								"id": 1,
+								"name": "exploded"
+							},
+							{
+								"id": 2,
+								"name": "defused"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 14,
+				"name": "player_activity_change",
+				"keys": [
+					{
+						"id": 0,
+						"name": "activity",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "playing",
+								"info": "The player started playing"
+							},
+							{
+								"id": 1,
+								"name": "menu",
+								"info": "The player entered the game’s menu"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 15,
+				"name": "team_set",
+				"comment": "The player selected a team",
+				"keys": [
+					{
+						"id": 0,
+						"name": "team",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "CT"
+							},
+							{
+								"id": 1,
+								"name": "T"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 5426,
+		"name": "League of Legends",
+		"events": [
+			{
+				"id": 0,
+				"name": "ability1",
+				"featureKey": "abilities",
+				"comment": "Using the first ability."
+			},
+			{
+				"id": 1,
+				"name": "ability2",
+				"featureKey": "abilities",
+				"comment": "Using the second ability."
+			},
+			{
+				"id": 2,
+				"name": "ability3",
+				"featureKey": "abilities",
+				"comment": "Using the third ability."
+			},
+			{
+				"id": 3,
+				"name": "ability4",
+				"featureKey": "abilities",
+				"comment": "Using the ultimate."
+			},
+			{
+				"id": 6,
+				"name": "death",
+				"comment": "The player’s champion died",
+				"keys": [
+					{
+						"id": 0,
+						"name": "count",
+						"info": "Number of deaths",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 7,
+				"name": "respawn",
+				"comment": "The player’s champion respawned"
+			},
+			{
+				"id": 8,
+				"name": "kill",
+				"comment": "Killing another champion",
+				"keys": [
+					{
+						"id": 0,
+						"name": "label",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "kill"
+							},
+							{
+								"id": 1,
+								"name": "double_kill"
+							},
+							{
+								"id": 2,
+								"name": "triple_kill"
+							},
+							{
+								"id": 3,
+								"name": "quadra_kill"
+							},
+							{
+								"id": 4,
+								"name": "penta_kill"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "count",
+						"info": "Number of times this kill type happened in the match",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "totalKills",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 9,
+				"name": "assist",
+				"comment": "When you assists killing another champion",
+				"keys": [
+					{
+						"id": 0,
+						"name": "count",
+						"info": "Number of times this event happened in the match",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 10,
+				"name": "matchStart",
+				"featureKey": "matchState",
+				"comment": "Match has started"
+			},
+			{
+				"id": 11,
+				"name": "matchEnd",
+				"featureKey": "matchState",
+				"comment": "Match is ended"
+			},
+			{
+				"id": 12,
+				"name": "championSelected",
+				"featureKey": "summoner_info",
+				"comment": "The selected champion, fires at the beginning of the game.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "name",
+						"info": "The name of the selected champion"
+					}
+				]
+			},
+			{
+				"id": 13,
+				"name": "minionKill",
+				"featureKey": "minions",
+				"comment": "Player killed an enemy minion",
+				"keys": [
+					{
+						"id": 0,
+						"name": "count",
+						"info": "Amount of enemy minions killed by the player",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 14,
+				"name": "neutralMinionKill",
+				"featureKey": "minions",
+				"comment": "Player killed a neutral minion",
+				"keys": [
+					{
+						"id": 0,
+						"name": "count",
+						"info": "Amount of neutral minions killed by the player",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 15,
+				"name": "goldChanged",
+				"featureKey": "gold",
+				"comment": "Fires whenever the amount of gold changes",
+				"keys": [
+					{
+						"id": 0,
+						"name": "count",
+						"info": "Gold amount",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 16,
+				"name": "usedAbility",
+				"featureKey": "abilities",
+				"comment": "Fires when the player actually activated the ability.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "type",
+						"info": "Ability number (between 1-4, 4 for ult).",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 17,
+				"name": "announcer",
+				"comment": "Fires whenever an announcement is being made.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "name",
+						"info": "Announcement",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "welcome_rift",
+								"info": "Welcome to Summoner’s Rift!"
+							},
+							{
+								"id": 1,
+								"name": "minions_30_sec",
+								"info": "Thirty seconds until minions spawn!"
+							},
+							{
+								"id": 2,
+								"name": "minions_spawn",
+								"info": "Minions have spawned!"
+							},
+							{
+								"id": 3,
+								"name": "first_blood",
+								"info": "First Blood!"
+							},
+							{
+								"id": 4,
+								"name": "slain",
+								"info": "An enemy/ally has been slain!"
+							},
+							{
+								"id": 5,
+								"name": "self_slain",
+								"info": "You have slain an enemy!"
+							},
+							{
+								"id": 6,
+								"name": "slain_self",
+								"info": "You have been slain!"
+							},
+							{
+								"id": 7,
+								"name": "killing_spree",
+								"info": "Killing Spree!"
+							},
+							{
+								"id": 8,
+								"name": "rampage",
+								"info": "Rampage!"
+							},
+							{
+								"id": 9,
+								"name": "unstoppable",
+								"info": "Unstoppable!"
+							},
+							{
+								"id": 10,
+								"name": "dominating",
+								"info": "Dominating!"
+							},
+							{
+								"id": 11,
+								"name": "godlike",
+								"info": "Godlike!"
+							},
+							{
+								"id": 12,
+								"name": "legendary",
+								"info": "Legendary!"
+							},
+							{
+								"id": 13,
+								"name": "double_kill",
+								"info": "Double Kill!"
+							},
+							{
+								"id": 14,
+								"name": "triple_kill",
+								"info": "Triple Kill!"
+							},
+							{
+								"id": 15,
+								"name": "quadra_kill",
+								"info": "Quadra Kill!"
+							},
+							{
+								"id": 16,
+								"name": "penta_kill",
+								"info": "Penta Kill!"
+							},
+							{
+								"id": 17,
+								"name": "executed",
+								"info": "Executed!"
+							},
+							{
+								"id": 18,
+								"name": "shutdown",
+								"info": "Shut down!"
+							},
+							{
+								"id": 19,
+								"name": "ace",
+								"info": "Aced!"
+							},
+							{
+								"id": 20,
+								"name": "turret_destroy",
+								"info": "A turret has been destroyed!"
+							},
+							{
+								"id": 21,
+								"name": "inhibitor_destroy",
+								"info": "An inhibitor has been destroyed!"
+							},
+							{
+								"id": 22,
+								"name": "inhibitor_respawn",
+								"info": "An inhibitor is respawning soon!"
+							},
+							{
+								"id": 23,
+								"name": "defeat",
+								"info": "Defeat!"
+							},
+							{
+								"id": 24,
+								"name": "victory",
+								"info": "Victory!"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "data",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "team"
+							},
+							{
+								"id": 1,
+								"name": "enemy"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 7314,
+		"name": "DOTA 2",
+		"events": [
+			{
+				"id": 0,
+				"name": "game_state_changed",
+				"comment": "The user starts playing, spectating or stops playing (no game available to play or spectate). Note that simply bringing the menu is not enough to trigger the ‘idle’ event – the active game (played or spectated) must be closed.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "game_state",
+						"info": "One of ‘playing’, ‘idle’ or ‘spectating’. Idle is when there isn’t a game being played or spectated.",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "playing"
+							},
+							{
+								"id": 1,
+								"name": "idle"
+							},
+							{
+								"id": 2,
+								"name": "spectating"
+							}
+						]
+					},
+					{
+						"id": 1,
+						"name": "match_state",
+						"info": "The internal match state.",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD",
+								"info": "Shown with the pre-game “Waiting for loaders” screen."
+							},
+							{
+								"id": 1,
+								"name": "DOTA_GAMERULES_STATE_HERO_SELECTION",
+								"info": "Shown with the hero selection screen."
+							},
+							{
+								"id": 2,
+								"name": "DOTA_GAMERULES_STATE_PRE_GAME",
+								"info": "Shown when the game begins, before the battle horn is heard."
+							},
+							{
+								"id": 3,
+								"name": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+								"info": "Shown with the start game battle horn."
+							},
+							{
+								"id": 4,
+								"name": "DOTA_GAMERULES_STATE_POST_GAME",
+								"info": "Shown with the in-game post-game screen."
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "match_id",
+						"info": "The id of the match (not available for ‘idle’).",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "player_steam_id",
+						"info": "The Steam id of the local player (not available for ‘idle’).",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "game_match_state_changed",
+				"comment": "The internal game match state has changed.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "match_state",
+						"info": "The internal match state.",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "DOTA_GAMERULES_STATE_WAIT_FOR_PLAYERS_TO_LOAD",
+								"info": "Shown with the pre-game “Waiting for loaders” screen."
+							},
+							{
+								"id": 1,
+								"name": "DOTA_GAMERULES_STATE_HERO_SELECTION",
+								"info": "Shown with the hero selection screen."
+							},
+							{
+								"id": 2,
+								"name": "DOTA_GAMERULES_STATE_PRE_GAME",
+								"info": "Shown when the game begins, before the battle horn is heard."
+							},
+							{
+								"id": 3,
+								"name": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+								"info": "Shown with the start game battle horn."
+							},
+							{
+								"id": 4,
+								"name": "DOTA_GAMERULES_STATE_POST_GAME",
+								"info": "Shown with the in-game post-game screen."
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "match_detected",
+				"comment": "As soon as 10 players accepted a match (just after the ‘Accept Match’ prompt).",
+				"keys": [
+					{
+						"id": 0,
+						"name": "gameMode",
+						"info": "One of the supported game modes.",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "AllPick"
+							},
+							{
+								"id": 1,
+								"name": "AllPickRanked"
+							},
+							{
+								"id": 2,
+								"name": "SingleDraft"
+							},
+							{
+								"id": 3,
+								"name": "RandomDraft"
+							},
+							{
+								"id": 4,
+								"name": "AllRandom"
+							},
+							{
+								"id": 5,
+								"name": "AllRandom"
+							},
+							{
+								"id": 6,
+								"name": "LeastPlayed"
+							},
+							{
+								"id": 7,
+								"name": "LimitedHeroes"
+							},
+							{
+								"id": 8,
+								"name": "CaptainsMode"
+							},
+							{
+								"id": 9,
+								"name": "CaptainsDraft"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 3,
+				"name": "hero_picked",
+				"comment": "For a full list of hero names you can watch the names in the urls in DotaBuff’s website. pickConfirmed does not currently support hero swapping. If you receive a hero pick event with a pickConfirmed = true before hero swapping, this means you will not receive a new event until support is implemented. Also, pick confirmed will only happen after the pick stage, when the match is starting.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "heroName",
+						"info": "The name of the picked hero."
+					},
+					{
+						"id": 1,
+						"name": "playerIndex",
+						"info": "The index of the player (0 – 9, left to right).",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "pickConfirmed",
+						"info": "True if this a finalized pick (not a random->repick pick).",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 4,
+				"name": "daytime_changed",
+				"comment": "Fired when the game transitions between day time and night time.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "daytime",
+						"info": "True if it is current day time, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 1,
+						"name": "clock_time",
+						"info": "The amount of seconds from when the game clocked shows (0:00). It can be negative during the Pre-Game phase.",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "nightstalker_night",
+						"info": "True if it is currently a Night Stalker ultimate night.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "clock_time_changed",
+				"comment": "Fired every second.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "daytime",
+						"info": "True if it is current day time, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 1,
+						"name": "clock_time",
+						"info": "The amount of seconds from when the game clocked shows (0:00). It can be negative during the Pre-Game phase.",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "nightstalker_night",
+						"info": "True if it is currently a Night Stalker ultimate night.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 6,
+				"name": "ward_purchase_cooldown_changed",
+				"comment": "Fired every second where wards are on cooldown.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "ward_purchase_cooldown",
+						"info": "The cooldown, in seconds, until wards are available for purchase again.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 7,
+				"name": "match_ended",
+				"comment": "When the game ends (an ancient is destroyed).",
+				"keys": [
+					{
+						"id": 0,
+						"name": "winner",
+						"info": "radiant/dire",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "radiant"
+							},
+							{
+								"id": 1,
+								"name": "dire"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 8,
+				"name": "kill",
+				"comment": "Whenever the player kills an enemy champion.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "kills",
+						"info": "The total number of kiils the player has.",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "kill_streak",
+						"info": "The current number of kills without dying to an enemy champion (denying oneself does not reset this counter).",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "label",
+						"info": "the type of kill (kill/double_kill/triple_kill/ultra_kill/rampage)",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "kill"
+							},
+							{
+								"id": 1,
+								"name": "double_kill"
+							},
+							{
+								"id": 2,
+								"name": "triple_kill"
+							},
+							{
+								"id": 3,
+								"name": "ultra_kill"
+							},
+							{
+								"id": 4,
+								"name": "rampage"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"name": "assist",
+				"comment": "Whenever the player assists in a kill of an enemy champion.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "assists",
+						"info": "The total number of assists the player has.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 10,
+				"name": "death",
+				"comment": "Whenever the player dies.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "deaths",
+						"info": "The total number of deaths the player has.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 11,
+				"name": "cs",
+				"comment": "Whenever the player last hits/denies non-champion units that grant creep score.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "last_hits",
+						"info": "The total amount of last hits (not denies) the player has.",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "denies",
+						"info": "The total amount of denies the player has.",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "type",
+						"info": "last_hit/deny.",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "last_hit"
+							},
+							{
+								"id": 1,
+								"name": "deny"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 12,
+				"name": "xpm",
+				"comment": "Whenever the XPM changes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "xpm",
+						"info": "The current XPM.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 13,
+				"name": "gpm",
+				"comment": "Whenever the GPM changes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "gpm",
+						"info": "The current GPM.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 14,
+				"name": "gold",
+				"comment": "Whenever the gold changes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "gold",
+						"info": "The current gold.",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "gold_reliable",
+						"info": "The reliable gold part.",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "gold_unreliable",
+						"info": "The unreliable gold part.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 15,
+				"name": "hero_leveled_up",
+				"comment": "Whenever the player levels up.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "hero_level",
+						"info": "The current hero level.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 16,
+				"name": "hero_respawned",
+				"comment": "Whenever the player respawns. This is also applicable for buying back."
+			},
+			{
+				"id": 17,
+				"name": "hero_buyback_info_changed",
+				"comment": "Every 4 seconds and every level up, since the buyback cost is affected by game time and player level. It will also be called every second when buyback is on cooldown.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "buyback_cost",
+						"info": "The gold cost to buyback",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "buyback_cooldown",
+						"info": "The cooldown remaining for buyback to become available.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 18,
+				"name": "hero_boughtback",
+				"comment": "Whenever the player buys back.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "buyback_cooldown",
+						"info": "The cooldown remaining for buyback to become available.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 19,
+				"name": "hero_health_mana_info",
+				"comment": "Whenever either of the players mana, health, max mana or max health changes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "health",
+						"info": "The current health.",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "max_health",
+						"info": "The current maximal health.",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "mana",
+						"info": "The current mana.",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "max_mana",
+						"info": "The current maximal mana.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 20,
+				"name": "hero_status_effect_changed",
+				"comment": "Whenever any of these effects changes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "silenced",
+						"info": "True if the player is silenced, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 1,
+						"name": "stunned",
+						"info": "True if the player is stunned, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 2,
+						"name": "disarmed",
+						"info": "True if the player is disarmed, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 3,
+						"name": "magicimmune",
+						"info": "True if the player is magic immune, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "hexed",
+						"info": "True if the player is hexed, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "muted",
+						"info": "True if the player is muted, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 6,
+						"name": "break",
+						"info": "True if the player is broken, false otherwise.",
+						"type": "bool"
+					},
+					{
+						"id": 7,
+						"name": "has_debuff",
+						"info": "True if the player is affected by any debuff, false otherwise.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 21,
+				"name": "hero_attributes_skilled",
+				"comment": "Whenever the player skills up his attributes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "attributes_level",
+						"info": "The current level of the player’s attributes.",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 22,
+				"name": "hero_ability_skilled",
+				"comment": "Whenever the player skills up an ability.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the ability slot (0 – 5, left to right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "name",
+						"info": "The name of the ability."
+					},
+					{
+						"id": 2,
+						"name": "level",
+						"info": "The current level of the ability.",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "can_cast",
+						"info": "True unless the ability is not skilled, there’s not enough mana to cast it, the player is silenced, or is on cooldown.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "passive",
+						"info": "True if the ability is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "ability_active",
+						"info": "Unknown, TBD.",
+						"type": "bool"
+					},
+					{
+						"id": 6,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the ability is ready to cast.",
+						"type": "number"
+					},
+					{
+						"id": 7,
+						"name": "ultimate",
+						"info": "True if the ability is an ultimate ability.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 23,
+				"name": "hero_ability_used",
+				"comment": "Whenever the player uses an ability.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the ability slot (0 – 5, left to right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "name",
+						"info": "The name of the ability."
+					},
+					{
+						"id": 2,
+						"name": "level",
+						"info": "The current level of the ability.",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "can_cast",
+						"info": "True unless the ability is not skilled, there’s not enough mana to cast it, the player is silenced, or is on cooldown.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "passive",
+						"info": "True if the ability is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "ability_active",
+						"info": "Unknown, TBD.",
+						"type": "bool"
+					},
+					{
+						"id": 6,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the ability is ready to cast.",
+						"type": "number"
+					},
+					{
+						"id": 7,
+						"name": "ultimate",
+						"info": "True if the ability is an ultimate ability.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 24,
+				"name": "hero_ability_cooldown_changed",
+				"comment": "Whenever an ability’s remaining cooldown is changed.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the ability slot (0 – 5, left to right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "name",
+						"info": "The name of the ability."
+					},
+					{
+						"id": 2,
+						"name": "level",
+						"info": "The current level of the ability.",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "can_cast",
+						"info": "True unless the ability is not skilled, there’s not enough mana to cast it, the player is silenced, or is on cooldown.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "passive",
+						"info": "True if the ability is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "ability_active",
+						"info": "Unknown, TBD.",
+						"type": "bool"
+					},
+					{
+						"id": 6,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the ability is ready to cast.",
+						"type": "number"
+					},
+					{
+						"id": 7,
+						"name": "ultimate",
+						"info": "True if the ability is an ultimate ability.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 25,
+				"name": "hero_ability_changed",
+				"comment": "Whenever an ability’s name changes.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the ability slot (0 – 5, left to right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "name",
+						"info": "The name of the ability."
+					},
+					{
+						"id": 2,
+						"name": "level",
+						"info": "The current level of the ability.",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "can_cast",
+						"info": "True unless the ability is not skilled, there’s not enough mana to cast it, the player is silenced, or is on cooldown.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "passive",
+						"info": "True if the ability is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "ability_active",
+						"info": "Unknown, TBD.",
+						"type": "bool"
+					},
+					{
+						"id": 6,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the ability is ready to cast.",
+						"type": "number"
+					},
+					{
+						"id": 7,
+						"name": "ultimate",
+						"info": "True if the ability is an ultimate ability.",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 26,
+				"name": "hero_item_changed",
+				"comment": "Whenever the item name in some hero/stash slot changes. This would mean that swapping items will trigger 2 events, one for each item.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the item slot (0 – 5, top row from the left to bottom row from the right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "location",
+						"info": "hero/stash",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "hero"
+							},
+							{
+								"id": 1,
+								"name": "stash"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "name",
+						"info": "The name of the item."
+					},
+					{
+						"id": 3,
+						"name": "passive",
+						"info": "True if the item is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "can_cast",
+						"info": "True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the item is ready to be used. (only when passive = false)",
+						"type": "number"
+					},
+					{
+						"id": 6,
+						"name": "charges",
+						"info": "The remaining charges of the item (only when passive = false and where item can be charged)",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 27,
+				"name": "hero_item_used",
+				"comment": "Whenever an item is used – Essentially this means when the item goes on cooldown.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the item slot (0 – 5, top row from the left to bottom row from the right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "location",
+						"info": "hero/stash",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "hero"
+							},
+							{
+								"id": 1,
+								"name": "stash"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "name",
+						"info": "The name of the item."
+					},
+					{
+						"id": 3,
+						"name": "passive",
+						"info": "True if the item is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "can_cast",
+						"info": "True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the item is ready to be used. (only when passive = false)",
+						"type": "number"
+					},
+					{
+						"id": 6,
+						"name": "charges",
+						"info": "The remaining charges of the item (only when passive = false and where item can be charged)",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 28,
+				"name": "hero_item_consumed",
+				"comment": "Whenever an item’s charges decrease.",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the item slot (0 – 5, top row from the left to bottom row from the right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "location",
+						"info": "hero/stash",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "hero"
+							},
+							{
+								"id": 1,
+								"name": "stash"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "name",
+						"info": "The name of the item."
+					},
+					{
+						"id": 3,
+						"name": "passive",
+						"info": "True if the item is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "can_cast",
+						"info": "True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the item is ready to be used. (only when passive = false)",
+						"type": "number"
+					},
+					{
+						"id": 6,
+						"name": "charges",
+						"info": "The remaining charges of the item (only when passive = false and where item can be charged)",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 29,
+				"name": "hero_item_charged",
+				"comment": "Whenever an item’s charges increase. location is always ‘hero’ Also triggered when item charges are increased due to kills (Bloodstone, Urn of Shadows).",
+				"keys": [
+					{
+						"id": 0,
+						"name": "slot",
+						"info": "The index of the item slot (0 – 5, top row from the left to bottom row from the right)",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "location",
+						"info": "hero/stash",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "hero"
+							},
+							{
+								"id": 1,
+								"name": "stash"
+							}
+						]
+					},
+					{
+						"id": 2,
+						"name": "name",
+						"info": "The name of the item."
+					},
+					{
+						"id": 3,
+						"name": "passive",
+						"info": "True if the item is passive.",
+						"type": "bool"
+					},
+					{
+						"id": 4,
+						"name": "can_cast",
+						"info": "True unless there’s not enough mana to use the item, the player is muted, or when the item is on cooldown. (only when passive = false)",
+						"type": "bool"
+					},
+					{
+						"id": 5,
+						"name": "cooldown",
+						"info": "The remaining cooldown until the item is ready to be used. (only when passive = false)",
+						"type": "number"
+					},
+					{
+						"id": 6,
+						"name": "charges",
+						"info": "The remaining charges of the item (only when passive = false and where item can be charged)",
+						"type": "number"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 10798,
+		"name": "Rocket League",
+		"events": [
+			{
+				"id": 0,
+				"name": "goal",
+				"comment": "A goal has been scored",
+				"featureKey": "stats",
+				"keys": [
+					{
+						"id": 0,
+						"name": "steamId",
+						"info": "the steam id of the player that score the goal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "score",
+						"info": "the score of the player that scored the goal",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "goals",
+						"info": "the goals count of the player",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "deaths",
+						"info": "the deaths count of the player",
+						"type": "number"
+					},
+					{
+						"id": 4,
+						"name": "name",
+						"info": "the name of the player that scored the goal"
+					},
+					{
+						"id": 5,
+						"name": "team",
+						"info": "the team number of the player (1 or 2)"
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "score",
+				"comment": "The score of a player has changed",
+				"featureKey": "stats",
+				"keys": [
+					{
+						"id": 0,
+						"name": "steamId",
+						"info": "the steam id of the player that score the goal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "score",
+						"info": "the score of the player that scored the goal",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "goals",
+						"info": "the goals count of the player",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "deaths",
+						"info": "the deaths count of the player",
+						"type": "number"
+					},
+					{
+						"id": 4,
+						"name": "name",
+						"info": "the name of the player that scored the goal"
+					},
+					{
+						"id": 5,
+						"name": "team",
+						"info": "the team number of the player (1 or 2)"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "matchStart",
+				"comment": "Match starts",
+				"featureKey": "match"
+			},
+			{
+				"id": 3,
+				"name": "matchEnd",
+				"comment": "Match ends",
+				"featureKey": "match"
+			},
+			{
+				"id": 4,
+				"name": "rosterChange",
+				"comment": "A player leaves/ enters a match",
+				"featureKey": "roster",
+				"keys": [
+					{
+						"id": 0,
+						"name": "steamId",
+						"info": "the steam id of the player that score the goal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "score",
+						"info": "the score of the player that scored the goal",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "goals",
+						"info": "the goals count of the player",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "deaths",
+						"info": "the deaths count of the player",
+						"type": "number"
+					},
+					{
+						"id": 4,
+						"name": "name",
+						"info": "the name of the player that scored the goal"
+					},
+					{
+						"id": 5,
+						"name": "team",
+						"info": "the team number of the player (1 or 2)"
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "playerJoined",
+				"comment": "A player joins the match",
+				"featureKey": "roster",
+				"keys": [
+					{
+						"id": 0,
+						"name": "steamId",
+						"info": "the steam id of the player that score the goal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "score",
+						"info": "the score of the player that scored the goal",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "goals",
+						"info": "the goals count of the player",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "deaths",
+						"info": "the deaths count of the player",
+						"type": "number"
+					},
+					{
+						"id": 4,
+						"name": "name",
+						"info": "the name of the player that scored the goal"
+					},
+					{
+						"id": 5,
+						"name": "team",
+						"info": "the team number of the player (1 or 2)"
+					}
+				]
+			},
+			{
+				"id": 6,
+				"name": "playerLeft",
+				"comment": "A player leaves the match",
+				"featureKey": "roster",
+				"keys": [
+					{
+						"id": 0,
+						"name": "steamId",
+						"info": "the steam id of the player that score the goal",
+						"type": "number"
+					},
+					{
+						"id": 1,
+						"name": "score",
+						"info": "the score of the player that scored the goal",
+						"type": "number"
+					},
+					{
+						"id": 2,
+						"name": "goals",
+						"info": "the goals count of the player",
+						"type": "number"
+					},
+					{
+						"id": 3,
+						"name": "deaths",
+						"info": "the deaths count of the player",
+						"type": "number"
+					},
+					{
+						"id": 4,
+						"name": "name",
+						"info": "the name of the player that scored the goal"
+					},
+					{
+						"id": 5,
+						"name": "team",
+						"info": "the team number of the player (1 or 2)"
+					}
+				]
+			},
+			{
+				"id": 7,
+				"name": "death",
+				"featureKey": "stats"
+			},
+			{
+				"id": 8,
+				"name": "victory",
+				"info": "Player’s team won the match",
+				"featureKey": "match",
+				"keys": [
+					{
+						"id": "0",
+						"name": "team_score",
+						"info": "(1 – Victory, 2- defeat)",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "1"
+							},
+							{
+								"id": 1,
+								"name": "2"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"name": "defeat",
+				"info": "Player’s team lost the match",
+				"featureKey": "match",
+				"keys": [
+					{
+						"id": "0",
+						"name": "team_score",
+						"info": "(1 – Victory, 2- defeat)",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "1"
+							},
+							{
+								"id": 1,
+								"name": "2"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 6365,
+		"name": "World of Tanks",
+		"events": [
+			{
+				"id": 0,
+				"name": "kill",
+				"comment": "A tank was destroyed",
+				"keys": [
+					{
+						"id": 0,
+						"name": "enemyTeam",
+						"info": "True if the event refers to an enemy unit, False if the event refers to an ally unit",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "one_shot_kill",
+				"comment": "The player’s tank destroyed another tank in a single shot (without any assistance from other players)",
+				"featureKey": "kill",
+				"keys": [
+					{
+						"id": 0,
+						"name": "enemyTeam",
+						"info": "True if the event refers to an enemy unit, False if the event refers to an ally unit",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 2,
+				"name": "damage",
+				"comment": "The player’s tank damaged  another tank",
+				"featureKey": "kill",
+				"keys": [
+					{
+						"id": 0,
+						"name": "enemyTeam",
+						"info": "True if the event refers to an enemy unit, False if the event refers to an ally unit",
+						"type": "bool"
+					},
+					{
+						"id": 1,
+						"name": "damage",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 3,
+				"name": "assist",
+				"comment": "The player’s tank assisted destroying another tank",
+				"featureKey": "kill",
+				"keys": [
+					{
+						"id": 0,
+						"name": "enemyTeam",
+						"info": "True if the event refers to an enemy unit, False if the event refers to an ally unit",
+						"type": "bool"
+					}
+				]
+			},
+			{
+				"id": 4,
+				"name": "death",
+				"comment": "The player’s tank was destroyed",
+				"keys": [
+					{
+						"id": 0,
+						"name": "enemyTeam",
+						"info": "True if the event refers to an enemy unit, False if the event refers to an ally unit",
+						"type": "bool"
+					},
+					{
+						"id": 1,
+						"name": "damage",
+						"type": "number"
+					}
+				]
+			},
+			{
+				"id": 5,
+				"name": "hit",
+				"comment": "The player’s tank was damaged",
+				"featureKey": "death",
+				"keys": [
+					{
+						"id": 0,
+						"name": "damage",
+						"type": "number"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 10844,
+		"name": "Overwatch",
+		"events": [
+			{
+				"id": 0,
+				"name": "kill",
+				"comment": "Killing another hero",
+				"featureKey": "kills",
+				"keys": [
+					{
+						"id": 0,
+						"name": "label",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "kill"
+							},
+							{
+								"id": 1,
+								"name": "double_kill"
+							},
+							{
+								"id": 2,
+								"name": "triple_kill"
+							},
+							{
+								"id": 3,
+								"name": "quadruple_kill"
+							},
+							{
+								"id": 4,
+								"name": "quintuple_kill"
+							},
+							{
+								"id": 5,
+								"name": "sixtaple_kill"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 1,
+				"name": "playOfTheGame",
+				"comment": "When play of the game is played in the game",
+				"featureKey": "postGame"
+			},
+			{
+				"id": 2,
+				"name": "assist",
+				"comment": "Player helps eliminate another player",
+				"featureKey": "kills"
+			},
+			{
+				"id": 3,
+				"name": "death",
+				"comment": "The user’s player dies"
+			},
+			{
+				"id": 4,
+				"name": "countdown",
+				"comment": "Countdown for the game occur. (When the players wait for the door to be opened)",
+				"featureKey": "preGame"
+			},
+			{
+				"id": 5,
+				"name": "playerOfTheGame",
+				"comment": "When play of the game is played in the game",
+				"featureKey": "postGame",
+				"keys": [
+					{
+						"id": 0,
+						"name": "name",
+						"info": "Player of the game name"
+					}
+				]
+			},
+			{
+				"id": 6,
+				"name": "gameOver",
+				"comment": "Game ends",
+				"featureKey": "postGame"
+			},
+			{
+				"id": 7,
+				"name": "playerLeft",
+				"comment": "Player has left the current match",
+				"featureKey": "roster",
+				"keys": [
+					{
+						"id": 0,
+						"name": "name",
+						"info": "Name of the player who left ( battle.net tag )"
+					}
+				]
+			},
+			{
+				"id": 8,
+				"name": "playerJoined",
+				"comment": "Player joined the current match",
+				"featureKey": "roster",
+				"keys": [
+					{
+						"id": 0,
+						"name": "battleTag"
+					},
+					{
+						"id": 1,
+						"name": "accountId"
+					},
+					{
+						"id": 2,
+						"name": "level"
+					},
+					{
+						"id": 3,
+						"name": "team",
+						"type": "enum",
+						"enum": [
+							{
+								"id": 0,
+								"name": "A"
+							},
+							{
+								"id": 1,
+								"name": "B"
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 9,
+				"name": "localPlayerLeft",
+				"comment": "The user’s player has left the current match. (Fires also when the user leaves the game before the match starts)",
+				"keys": [
+					{
+						"id": 0,
+						"name": "name",
+						"info": "Name of the player who left ( battle.net tag )"
+					}
+				]
+			}
+		]
+	}
+]

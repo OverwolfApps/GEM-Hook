@@ -1,111 +1,106 @@
 <!DOCTYPE html>
 <html ng-app="gemApp">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>GEM - Inputs</title>
 
 	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/flex.css">
 	<style>
-		#inputWrapper {
-			padding-bottom: 60px;
-		}
 		#keyboardContainer {
 			position: relative;
 		}
-		#keyboardContainer, #mouseContainer {
-			zoom: 0.7;
-		}
 		.keyboard-row {
-			margin-bottom: 13px;
+			margin-bottom: 5.7px;
 		}
 		.keyboard-row:first-child {
-			margin-bottom: 24px;
+			margin-bottom: 12px;
 		}
 		.keyboard-key {
 			display: inline-block;
 			box-sizing: border-box;
 			color: #fff;
 			background-color: #151515;
-			font-size: 13px;
-			line-height: 26px;
+			font-size: 9px;
+			line-height: 17px;
 			text-align: center;
 			vertical-align: middle;
-			width: 24px;
-			height: 26px;
-			margin-right: 17px;
+			width: 15.9px;
+			height: 17px;
+			margin-right: 8.9px;
 		}
 		.keyboard-key.active {
 			background: #f00;
 		}
 		.ESC {
-			margin-right: 44px;
+			margin-right: 25px;
 		}
 		.F4, .F8 {
-			margin-right: 45px;
+			margin-right: 25px;
 		}
 		.CAPS_LOCK {
-			margin-right: 27px;
+			margin-right: 14px;
 		}
 		.ENTER {
-			margin-right: 167px;
+			margin-right: 100px;
 		}
 		.LEFT_CONTROL {
-			margin-right: 18px;
+			margin-right: 11px;
 		}
 		.RIGHT_CONTROL {
-			margin-right: 33px;
+			margin-right: 19px;
 		}
 		.ARROW_RIGHT, .F12, .BACKSPACE, .PAGE_UP, .PAGE_DOWN, .BACKSLASH {
-			margin-right: 30px;
+			margin-right: 17px;
 		}
 		.RIGHT_SHIFT, .ARROW_UP {
-			margin-right: 71px;
+			margin-right: 42px;
 		}
 		.TAB, .CAPS_LOCK, .LEFT_CONTROL, .RIGHT_CONTROL, .BACKSLASH {
-			width: 45px;
+			width: 28px;
 		}
 		.SPACE {
-			width: 221px;
+			width: 135px;
 		}
 		.BACKSPACE, .NUM_ZERO {
-			width: 65px;
+			width: 39px;
 		}
 		.LEFT_WINDOWS, .LEFT_ALT, .RIGHT_ALT, .APPLICATION_SELECT, .RIGHT_WINDOWS {
-			width: 33px;
+			width: 21px;
 		}
 		.RIGHT_SHIFT {
-			width: 96px;
+			width: 59px;
 		}
 		.LEFT_SHIFT, .ENTER {
-			width: 75px;
+			width: 47px;
 		}
 		.NUM_ENTER, .NUM_PLUS {
 			position: absolute;
-			left: 887px;
-			height: 65px;
+			left: 535px;
+			height: 41px;
 		}
 		.F10, .F11, .F12, .UP {
-			font-size: 11px;
+			font-size: 6px;
 		}
 		.ESC, .BACKSPACE, .DEL, .END {
-			font-size: 9px;
+			font-size: 6px;
 		}
 		.PRINT_SCREEN, .SCROLL_LOCK, .PAUSE_BREAK, .PAGE_UP, .PAGE_DOWN {
 			line-height: 1;
 			padding-top: 7px;
-			font-size: 5px;
+			font-size: 3px;
 		}
 		.INSERT, .HOME, .ARROW_LEFT, .ARROW_DOWN, .ARROW_RIGHT, .NUM_LOCK, .NUM_ENTER {
 			font-size: 5px;
 		}
 		.NUM_PLUS, .NUM_ENTER {
-			padding-top: 19px;
+			line-height: 41px;
 		}
 
 		#mouseContainer {
 			position: relative;
-			width: 232px;
+			width: 73px;
+			height: 120px;
+			margin-left: 20px;
 			background: url('assets/images/mouse.png') no-repeat;
 		}
 		.left, .middle, .right {
@@ -113,38 +108,33 @@
 			top: 25px;
 		}
 		.left, .right {
-			width: 61px;
-			height: 88px;
+			width: 37px;
+			height: 53px;
 		}
 		.left {
 			background: url('assets/images/mouse-left-button.png') no-repeat;
-			left: 56px;
-			top: 18px;
+			left: -1px;
+			top: 0px;
 		}
 		.middle {
 			background: url('assets/images/mouse-middle-button.png') no-repeat;
-			width: 16px;
-			height: 68px;
-			left: 109px;
-			top: 29px;
+			width: 10px;
+			height: 17px;
+			left: 32px;
+			top: 7px;
 		}
 		.right {
 			background: url('assets/images/mouse-right-button.png') no-repeat;
-			left: 118px;
-			top: 18px;
+			left: 38px;
+			top: 0px;
 		}
 	</style>
 
-	<script src="libs/angular.min.js"></script>
+	<script src="vendor/angular.min.js"></script>
 	<script>
-		(function() {
-			'use strict';
-
-			angular
-				.module('gemApp', [])
-				.controller('MainController', MainController);
-
-			function MainController($scope, $q) {
+		angular
+			.module('gemApp', [])
+			.controller('MainCtrl', function($scope) {
 				$scope.keyboard = [
 					[{name: "ESC", code: 27}, {name: "F1", code: 112}, {name: "F2", code: 113}, {name: "F3", code: 114}, {name: "F4", code: 115}, {name: "F5", code: 116}, {name: "F6", code: 117}, {name: "F7", code: 118}, {name: "F8", code: 119}, {name: "F9", code: 120}, {name: "F10", code: 121}, {name: "F11", code: 122}, {name: "F12", code: 123}, {name: "PRINT SCREEN", class: 'PRINT_SCREEN'}, {name: "SCROLL LOCK", class: 'SCROLL_LOCK', code: 145}, {name: "PAUSE BREAK", class: 'PAUSE_BREAK', code: 19}],
 					[{name: "`", code: 192}, {name: "1", code: 49}, {name: "2", code: 50}, {name: "3", code: 51}, {name: "4", code: 52}, {name: "5", code: 53}, {name: "6", code: 54}, {name: "7", code: 55}, {name: "8", code: 56}, {name: "9", code: 57}, {name: "0", code: 48}, {name: "-", code: 189}, {name: "=", code: 187}, {name: "BACKSPACE", code: 8}, {name: "INSERT", code: 45}, {name: "HOME", code: 36}, {name: "PAGE UP", class: 'PAGE_UP', code: 33}, {name: "LOCK", class: 'NUM_LOCK', code: 144}, {name: "/", class: 'NUM_SLASH', code: 111}, {name: "*", code: 106}, {name: "-", code: 109}],
@@ -160,33 +150,33 @@
 					right: false
 				};
 
-				overwolf.games.inputTracking.onKeyDown.addListener(keyDown);
 				overwolf.games.inputTracking.onKeyUp.addListener(keyUp);
+				overwolf.games.inputTracking.onKeyDown.addListener(keyDown);
 
-				overwolf.games.inputTracking.onMouseDown.addListener(mouseDown);
 				overwolf.games.inputTracking.onMouseUp.addListener(mouseUp);
+				overwolf.games.inputTracking.onMouseDown.addListener(mouseDown);
 
 				overwolf.games.onGameInfoUpdated.addListener(gameInfoUpdated);
-
-				function keyDown(event) {
-					if (!event.onGame) return;
-					setKeyState(event, true);
-				}
 
 				function keyUp(event) {
 					if (!event.onGame) return;
 					setKeyState(event, false);
 				}
 
-				function mouseDown(event) {
+				function keyDown(event) {
 					if (!event.onGame) return;
-					$scope.mouse[event.button] = true;
-					$scope.$digest();
+					setKeyState(event, true);
 				}
 
 				function mouseUp(event) {
 					if (!event.onGame) return;
 					$scope.mouse[event.button] = false;
+					$scope.$digest();
+				}
+
+				function mouseDown(event) {
+					if (!event.onGame) return;
+					$scope.mouse[event.button] = true;
 					$scope.$digest();
 				}
 
@@ -199,57 +189,53 @@
 					$scope.$digest();
 				}
 
-				function setWindowPosition() {
-
+				function setWindow() {
 					overwolf.games.getRunningGameInfo(function(gameInfo) {
 						if (gameInfo) {
+							var marginBottom = 40;
+							var width = document.body.offsetWidth;
 							var height = document.body.offsetHeight;
-
-							overwolf.windows.changeSize('inputWindow', gameInfo.width, height, function(result) {
-								console.log('changeSize result', result);
-								if (result.status === 'success') {
-									overwolf.windows.changePosition('inputWindow', 0, gameInfo.height - height, function(result) { console.log('changePosition result', result); });
-								}
-							});
+							var left = parseInt((gameInfo.width / 2) - (width / 2));
+							var top = gameInfo.height - height - marginBottom;
+							overwolf.windows.changeSize('InputWindow', width, height, function() {});
+							overwolf.windows.changePosition('InputWindow', left, top, function() {});
 						}
 					});
 				}
 
-				function gameInfoUpdated() {
-					setWindowPosition();
+				function gameInfoUpdated(game) {
+					if (game.resolutionChanged) setWindow();
 
-					$scope.mouse = {
-						left: false,
-						middle: false,
-						right: false
-					};
-
-					$scope.keyboard.forEach(function(row) {
-						row.forEach(function(key) {
-							key.active = false;
+					if (game.focusChanged) {
+						$scope.mouse = {
+							left: false,
+							middle: false,
+							right: false
+						};
+						$scope.keyboard.forEach(function(row) {
+							row.forEach(function(key) {
+								key.active = false;
+							});
 						});
-					});
-
-					$scope.$digest();
+						$scope.$digest();
+					}
 				}
 
-				setWindowPosition();
-			}
-
-		}());
+				setWindow();
+			});
 	</script>
 </head>
-<body class="column-bottom" ng-controller="MainController">
-	<div id="inputWrapper" class="row-center">
+<body class="column" ng-controller="MainCtrl">
+	<div class="row row-items-middle grow">
 		<div id="keyboardContainer" class="no-shrink">
-			<div class="keyboard-row" ng-repeat="row in keyboard" no-anim>
-				<div class="keyboard-key" ng-repeat="key in row" ng-class="[key.class || key.name, key.active ? 'active' : '']" ng-bind="key.name" no-anim></div>
+			<div class="keyboard-row" ng-repeat="row in keyboard">
+				<div class="keyboard-key" ng-repeat="key in row" ng-class="[key.class || key.name, key.active ? 'active' : '']" ng-bind="::key.name"></div>
 			</div>
 		</div>
 		<div id="mouseContainer" class="no-shrink">
-			<div class="left" ng-show="mouse.left" no-anim></div>
-			<div class="middle" ng-show="mouse.middle" no-anim></div>
-			<div class="right" ng-show="mouse.right" no-anim></div>
+			<div class="left" ng-show="mouse.left"></div>
+			<div class="middle" ng-show="mouse.middle"></div>
+			<div class="right" ng-show="mouse.right"></div>
 		</div>
 	</div>
 </body>

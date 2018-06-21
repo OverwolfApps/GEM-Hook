@@ -1,42 +1,53 @@
-<header title="GEM - Settings"></header>
 <div id="content" class="grow">
-	<form name="optionsForm" novalidate>
+	<h6 class="legend">Settings</h6>
+	<div class="form-group">
+		<h6>Replays</h6>
 		<div class="form-group">
-			<h4>Theme</h4>
-			<div themer-switcher></div>
-		</div>
-		<div class="form-group">
-			<toggle label="Replay capture" checked="replayCaptureState" ng-click="toggleReplayCapture()">
-				<span class="small">Enables replay capture functionalities.</span>
+			<toggle label="Toggle replay capture" checked="replayCaptureState" ng-click="toggleReplayCapture()">
+				<span>Toggles replay capture. Keep in mind that it consumes a lot of system resources.</span>
 			</toggle>
 		</div>
 		<div class="form-group">
-			<checkbox label="Enable replay capture on minimize" ng-model="settings.captureOnMinimize">
-				<span class="small">Replay capture will be automatically turned on when minimized.</span>
+			<checkbox label="Enable replay capture when minimized" ng-model="settings.captureOnMinimize">
+				<span>Replay capture will be automatically turned on when GEM gets minimized.</span>
 			</checkbox>
 		</div>
 		<div class="form-group">
-			<checkbox label="Capture notifications/images" ng-model="settings.captureNotifications">
-				<span class="small">Notifications and images will be shown on the replay video.</span>
-			</checkbox>
-		</div>
-		<div class="form-group">
-			<checkbox label="Show keyboard and mouse overlay" ng-model="settings.captureInputs">
-				<span class="small">Your keystrokes and mouse clicks will be displayed on the replay video.</span>
+			<checkbox label="Capture notifications" ng-model="settings.captureNotifications">
+				<span>Notifications will be displayed on the replay video.</span>
 			</checkbox>
 		</div>
 		<div class="form-group">
 			<external label="Video settings" href="overwolf://settings/capture"></external>
 		</div>
+	</div>
+	<div class="form-group">
+		<h6>Overlays</h6>
 		<div class="form-group">
-			<external label="Hotkeys" href="overwolf://settings/hotkeys#instant-replay"></external>
-			<div class="form-group">
-				<h4>Instant replay <span ng-show="instantReplayHotkey">( {{instantReplayHotkey}} )</span></h4>
-				<span class="small">Replay the last 20 seconds of your game.</span>
-			</div>
+			<checkbox label="Keyboard and mouse" ng-model="settings.captureInputs">
+				<span>Your keystrokes and mouse clicks will be displayed on the replay video.</span>
+			</checkbox>
 		</div>
-	</form>
+	</div>
+	<div class="form-group">
+		<h6>Hotkeys ( only available in-game )</h6>
+		<div class="form-group">
+			<external label="Toggle GEM ( {{toggleGEMHotkey}} )" href="overwolf://settings/hotkeys#toggle-GEM">
+				<span>Toggles GEM visibility. It will run and display GEM if it isn't running.</span>
+			</external>
+		</div>
+		<div class="form-group">
+			<external label="Toggle replay capture ( {{toggleCaptureHotkey}} )" href="overwolf://settings/hotkeys#toggle-capture">
+				<span>Toggles replay capture.</span>
+			</external>
+		</div>
+		<div class="form-group">
+			<external label="Instant replay ( {{instantReplayHotkey}} )" href="overwolf://settings/hotkeys#instant-replay">
+				<span>Replays the last 20 seconds of your game.</span>
+			</external>
+		</div>
+	</div>
 </div>
 <footer>
-	<button class="btn" ng-click="save()" ng-disabled="optionsForm.$invalid">Save</button>
+	<button class="btn" ng-click="save()"><i class="fa fa-floppy-o fa-fw"></i> Save</button>
 </footer>

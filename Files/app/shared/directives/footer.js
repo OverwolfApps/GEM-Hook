@@ -1,21 +1,15 @@
-(function() {
-	'use strict';
-
-	angular
-		.module('gemApp')
-		.directive('footer', footer);
-
-	function footer($location) {
+angular
+	.module('gemApp')
+	.directive('footer', function($location) {
 		return {
 			restrict: 'E',
-			replace: true,
 			scope: {},
+			replace: true,
 			transclude: true,
 			template:
-				'<div id="footer" class="row-right no-shrink">\
-					<button class="btn back" ng-if="!mainPage" ng-click="back()">Back</button>\
-					<ng-transclude></ng-transclude>\
-					<img id="resizeButton" src="assets/images/resize-icon.png">\
+				'<div id="footer" class="column column-items-stretch no-shrink">\
+					<ng-transclude class="column column-items-stretch"></ng-transclude>\
+					<button class="btn" ng-if="!mainPage" ng-click="back()">Back</button>\
 				</div>',
 			link: function(scope, element, attrs) {
 				var path = $location.path();
@@ -24,15 +18,6 @@
 				scope.back = function() {
 					$location.path('/');
 				};
-
-				element.find('#resizeButton').on('mousedown', function() {
-					q(overwolf.windows.getCurrentWindow)
-						.then(function(result) {
-							overwolf.windows.dragResize(result.window.id, 'BottomRight');
-						});
-				});
 			}
 		};
-	}
-
-}());
+	});

@@ -1,11 +1,6 @@
-(function() {
-	'use strict';
-
-	angular
-		.module('gemApp')
-		.directive('checkbox', checkbox);
-
-	function checkbox() {
+angular
+	.module('gemApp')
+	.directive('checkbox', function() {
 		return {
 			restrict: 'E',
 			require: 'ngModel',
@@ -16,13 +11,13 @@
 			transclude: true,
 			template:
 				'<div class="row checkbox" ng-class="{\'checkbox-active\': checked}" ng-click="click()">\
+					<i class="fa fa-fw no-shrink" style="margin-right: 5px" ng-class="checked ? \'fa-check-square-o\' : \'fa-square-o\'"></i>\
 					<div class="grow" ng-if="label">\
-						<h4 class="grow" ng-bind="label"></h4>\
-						<ng-transclude class="column" style="margin-top: 2px" ng-if="hasTransclude"></ng-transclude>\
+						<h6 class="grow" ng-bind="label"></h6>\
+						<ng-transclude class="column" ng-if="hasTransclude"></ng-transclude>\
 					</div>\
-					<i class="fa fa-fw no-shrink" ng-class="checked ? \'fa-check-square-o\' : \'fa-square-o\'"></i>\
 				</div>',
-			link: function(scope, element, attrs, ngModelCtrl, $transclude) {
+			link: function(scope, element, attrs, ngModel, $transclude) {
 
 				$transclude(function(transcludeElement, transcludeScope) {
 					scope.hasTransclude = !!transcludeElement.length;
@@ -30,16 +25,14 @@
 
 				scope.click = function() {
 					if (element.is('[disabled]')) return;
-					scope.checked = !(!!ngModelCtrl.$viewValue);
-					ngModelCtrl.$setViewValue(scope.checked);
+					scope.checked = !(!!ngModel.$viewValue);
+					ngModel.$setViewValue(scope.checked);
 				};
 
-				ngModelCtrl.$render = function() {
-					scope.checked = !!ngModelCtrl.$viewValue;
+				ngModel.$render = function() {
+					scope.checked = !!ngModel.$viewValue;
 				};
 
 			}
 		};
-	}
-
-}());
+	});

@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html ng-app="gemApp">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>GEM - Player</title>
 
 	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/flex.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link themer-link>
+
 	<style>
 		body {
-			background: transparent !important;
-			color: #FFF !important;
+			background: transparent;
+			color: #eee;
 		}
-		body:hover #controls, body:hover #closeButton {
+		body:hover #controls {
 			opacity: 1;
 		}
-		#content {
-			background: transparent !important;
-		}
 		#controls {
-			transition: all 0.4s ease;
-			opacity: 0;
-		}
-		#closeButton {
-			margin: 5px;
+			padding: 10px;
 			opacity: 0;
 			transition: all 0.4s ease;
 		}
 		#progress-wrapper {
 			margin-bottom: 10px;
-			background: #EEE;
+			background: #eee;
 			height: 4px;
+			transition: height 150ms linear;
+		}
+		#progress-wrapper:hover {
+			height: 10px;
 		}
 		#progress {
 			background: red;
-			height: 4px;
 			width: 0px;
+		}
+		#progressValue {
+			font-size: 24px;
+			line-height: 24px;
+			margin-left: 5px
+		}
+		#speedWrapper {
+			margin-right: 5px;
 		}
 		input[type=range] {
 			-webkit-appearance: none;
@@ -45,16 +48,14 @@
 		input[type=range]::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			position: relative;
-			top: -8px;
-			width: 22px;
-			height: 22px;
+			top: -7px;
+			width: 19px;
+			height: 19px;
 			background: white;
-			border: 1px solid #ccc;
 			border-radius: 50%;
 		}
 		input[type=range]::-webkit-slider-runnable-track {
 			position: relative;
-			top: -7px;
 			background: white;
 			height: 5px;
 			cursor: pointer;
@@ -63,49 +64,253 @@
 			position: relative;
 			left: -6px;
 		}
-		.progress-text {
-			font-size: 24px;
-			line-height: 24px;
-			margin-left: 5px
-		}
 	</style>
 
-	<script src="libs/q.js"></script>
-	<script src="libs/angular.min.js"></script>
-	<script src="libs/ngStorage.min.js"></script>
-	<script src="libs/themer.js"></script>
+	<script src="vendor/angular.min.js"></script>
+	<script src="vendor/ngStorage.min.js"></script>
 
-	<script src="app/player/module.js"></script>
-	<script src="app/player/filters/time.js"></script>
-	<script src="app/shared/directives/header.js"></script>
-	<script src="app/player/controllers/main.controller.js"></script>
+	<script>
+		angular
+			.module('gemApp', ['ngStorage'])
+			.filter('time', function() {
+				return function(text) {
+					var hours = Math.round(text / 3600);
+					var minutes = Math.round(text / 60);
+					var seconds = Math.round(text % 60);
+					var pad = function(number) {
+						return number < 10 ? '0' + number : number;
+					};
 
-	<script src="app/shared/services/messenger.js"></script>
+					if (Math.round(hours) === 0) return minutes + ':' + pad(seconds);
+					return hours + ':' + pad(minutes) + ':' + pad(seconds);
+				};
+			})
+			.controller('MainCtrl', function($scope, Messenger) {
+				var progressInterval;
+				var mediaPlayerId;
+				var progressDiv = document.querySelector('#progress');
+				var displayDiv = document.querySelector('#progress-wrapper');
+
+				$scope.volume = 100;
+				$scope.speed = 1;
+				$scope.isPlaying = false;
+				$scope.progress = 0;
+				$scope.replayLength = 0;
+
+				$scope.$watch('progress', function(newValue, oldValue) {
+					var porcent = ($scope.progress * 100) / $scope.replayLength;
+					progressDiv.style.width = parseInt((displayDiv.offsetWidth / 100) * porcent) + 'px';
+				});
+
+				$scope.$watch('volume', function(newValue, oldValue) {
+					overwolf.windows.mediaPlayerElement.setVolume(mediaPlayerId, parseInt(newValue), function() {});
+				});
+
+				$scope.$watch('speed', function(newValue, oldValue) {
+					overwolf.windows.mediaPlayerElement.setPlaybackSpeed(mediaPlayerId, parseFloat(newValue), function() {});
+				});
+
+				$scope.$on('message-received', function(event, message) {
+					if (message.id !== 'videoURL') return;
+					var url = JSON.parse(message.content).url;
+					setVideo(url)
+						.then(function() {
+							$scope.toggleState(true);
+						});
+				});
+
+				$scope.progressClicked = function(event) {
+					var percent = (event.offsetX * 100) / displayDiv.offsetWidth;
+					$scope.progress = parseInt(($scope.replayLength * percent) / 100);
+					overwolf.windows.mediaPlayerElement.seek(mediaPlayerId, parseInt($scope.progress), function() {});
+				};
+
+				$scope.toggleState = function(state) {
+					var play = function() {
+						overwolf.windows.mediaPlayerElement.play(mediaPlayerId, function() {});
+					};
+					var pause = function() {
+						overwolf.windows.mediaPlayerElement.pause(mediaPlayerId, function() {});
+					};
+
+					if (state != undefined) {
+						if (state) play();
+						else pause();
+					} else {
+						if ($scope.isPlaying) pause();
+						else play();
+					}
+				};
+
+				$scope.toggleMute = function() {
+					if ($scope.volume === 0) $scope.volume = 100;
+					else $scope.volume = 0;
+				};
+
+				$scope.contentClicked = function(event) {
+					if (event.target === document.body) $scope.toggleState();
+				};
+
+				$scope.checkESC = function(event) {
+					switch (event.keyCode) {
+						case 27:
+							overwolf.windows.close('PlayerWindow');
+							break;
+						case 32:
+							$scope.toggleState();
+							break;
+					}
+				};
+
+				function setVideo(url) {
+					return new Promise(function(resolve, reject) {
+						$scope.toggleState(false);
+
+						overwolf.windows.mediaPlayerElement.setVideo(url, function(result) {
+							if (result.status === 'success') {
+								$scope.replayLength = result.duration || result.length;
+								$scope.progress = 0;
+								$scope.$digest();
+								resolve();
+							} else {
+								reject(result.error);
+							}
+						});
+					});
+				}
+
+				function startInterval() {
+					progressInterval = setInterval(updateProgress, 1000);
+				}
+
+				function stopInterval() {
+					if (progressInterval) clearInterval(progressInterval);
+					progressInterval = undefined;
+
+				}
+
+				function updateProgress() {
+					overwolf.windows.mediaPlayerElement.getProgress(mediaPlayerId, function(result) {
+						if (result.status === 'success') {
+							$scope.progress = result.progress;
+							$scope.$digest();
+						}
+					});
+				}
+
+				function setWindow() {
+					return new Promise(function(resolve, reject) {
+						var scale = 0.6;
+						var availWidth = screen.width;
+						var availHeight = screen.height;
+						var width, height, left, top;
+
+						overwolf.games.getRunningGameInfo(function(gameInfo) {
+							if (gameInfo) {
+								availWidth = gameInfo.width;
+								availHeight = gameInfo.height;
+							}
+
+							width = parseInt(availWidth * scale);
+							height = parseInt(availHeight * scale);
+
+							left = parseInt(availWidth / 2 - document.body.offsetWidth / 2);
+							top = parseInt(availHeight / 2 - document.body.offsetHeight / 2);
+
+							overwolf.windows.changeSize('PlayerWindow', width, height, function() {});
+							overwolf.windows.changePosition('PlayerWindow', left, top, function() {});
+
+							resolve();
+						});
+					});
+				}
+
+				function createPlayer() {
+					return new Promise(function(resolve, reject) {
+						overwolf.windows.mediaPlayerElement.create(document.body.offsetLeft, document.body.offsetTop , document.body.offsetWidth, document.body.offsetHeight, function(result) {
+							if (result.status === 'success') {
+								mediaPlayerId = result.id;
+								resolve();
+							} else {
+								reject(result.error);
+							}
+						});
+					});
+				}
+
+				function notifyPlayerReady() {
+					Messenger.send('MainWindow', 'playerReady');
+				}
+
+				function playbackStarted() {
+					startInterval();
+					$scope.isPlaying = true;
+					$scope.$digest();
+				}
+
+				function playbackPaused() {
+					stopInterval();
+					$scope.isPlaying = false;
+					$scope.$digest();
+				}
+
+				function playbackStopped() {
+					stopInterval();
+					$scope.isPlaying = false;
+					$scope.$digest();
+				}
+
+				function playbackEnded() {
+					stopInterval();
+					$scope.isPlaying = false;
+					$scope.progress = 0;
+					$scope.$digest();
+				}
+
+				function playbackError(result) {
+					stopInterval();
+					$scope.isPlaying = false;
+					$scope.progress = 0;
+					$scope.$digest();
+					console.error('Playback error.', result);
+					alert('Playback error. Message: ' + result.error);
+				}
+
+				overwolf.windows.mediaPlayerElement.onPlaybackStarted.addListener(playbackStarted);
+				overwolf.windows.mediaPlayerElement.onPlaybackPaused.addListener(playbackPaused);
+				overwolf.windows.mediaPlayerElement.onPlaybackStopped.addListener(playbackStopped);
+				overwolf.windows.mediaPlayerElement.onPlaybackEnded.addListener(playbackEnded);
+				overwolf.windows.mediaPlayerElement.onPlaybackError.addListener(playbackError);
+
+				setWindow()
+					.then(createPlayer)
+					.then(notifyPlayerReady)
+					.catch(function(error) {
+						alert(error);
+					});
+			});
+	</script>
+	<script src="app/shared/services/Messenger.js"></script>
 </head>
-<body class="column-bottom" ng-controller="MainController" ng-keydown="checkESC($event)">
-	<header title="GEM - Player"></header>
-	<div id="content" class="column-bottom grow" ng-click="contentClicked($event)">
-		<div id="controls" class="pad">
-			<div id="progress-wrapper" ng-click="progressClicked($event)">
-				<div id="progress"></div>
-			</div>
-			<dir class="row">
-				<div class="row half">
-					<i class="fa fa-fw fa-2x" ng-class="{'fa-play': !isPlaying, 'fa-pause': isPlaying}" ng-click="toggleState()"></i>
-					<div id="volumeControl">
-						<i class="fa fa-fw fa-2x" ng-class="{'fa-volume-up': volume!=0, 'fa-volume-off': volume==0}" ng-click="toggleMute()"></i>
-						<input type="range" id="volumeRange" min="0" max="100" ng-model="volume" ng-change="volumeChanged()">
-					</div>
-					<span class="progress-text" ng-bind="(progress | time) + ' / ' + (replayLength | time)"></span>
-				</div>
-				<div class="row-right half">
-					<div id="speedControl">
-						<i class="fa fa-forward fa-2x"></i><span>x{{speed}}</span>
-						<input type="range" id="speedRange" min="0.1" max="2" step="0.1" ng-model="speed" ng-change="speedChanged()">
-					</div>
-				</div>
-			</dir>
+<body class="column-bottom" ng-controller="MainCtrl" ng-keydown="checkESC($event)" ng-click="contentClicked($event)">
+	<div id="controls">
+		<div id="progress-wrapper" class="row row-items-stretch" ng-click="progressClicked($event)">
+			<div id="progress"></div>
 		</div>
+		<dir class="row">
+			<div class="row row-items-middle half">
+				<i class="fa fa-fw fa-2x" ng-class="{'fa-play': !isPlaying, 'fa-pause': isPlaying}" ng-click="toggleState()"></i>
+				<i class="fa fa-fw fa-2x" ng-class="{'fa-volume-up': volume!=0, 'fa-volume-off': volume==0}" ng-click="toggleMute()"></i>
+				<input type="range" min="0" max="100" ng-model="volume">
+				<span id="progressValue" ng-bind="(progress | time) + ' / ' + (replayLength | time)"></span>
+			</div>
+			<div class="row-right row-items-middle half">
+				<div id="speedWrapper" class="row row-items-bottom">
+					<i class="fa fa-forward fa-2x"></i><span>x{{speed}}</span>
+				</div>
+				<input type="range" min="0.1" max="2" step="0.1" ng-model="speed">
+			</div>
+		</dir>
 	</div>
 </body>
 </html>

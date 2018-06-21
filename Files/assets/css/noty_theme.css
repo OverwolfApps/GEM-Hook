@@ -1,0 +1,48 @@
+#noty_layout__top, #noty_layout__bottom {
+	width: 325px;
+	left: 50%;
+	transform: translateX(calc(-50% - .5px)) translateZ(0) scale(1, 1);
+}
+.noty_theme__gem.noty_bar {
+	margin: 4px 0;
+	overflow: hidden;
+	position: relative;
+	border-left: 4px solid;
+	background: #111;
+}
+.noty_theme__gem .noty_body {
+	padding: 1em;
+ }
+.noty_theme__gem .noty_progressbar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.2;
+	filter: alpha(opacity=20)
+ }
+.noty_theme__gem .noty_buttons {
+	padding: 0 10px .5em 10px;
+}
+.noty_theme__gem.noty_type__alert {
+  border-color: #fff;
+  color: #eee;
+}
+.noty_theme__gem.noty_type__info {
+  border-color: #1BA1E2;
+  color: #eee;
+}
+.noty_theme__gem.noty_type__success {
+  border-color: #60A917;
+  color: #eee;
+}
+.noty_theme__gem.noty_type__warning {
+  border-color: #FA6800;
+  color: #eee;
+}
+.noty_theme__gem.noty_type__error {
+  border-color: #CE352C;
+  color: #eee;
+}

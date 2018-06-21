@@ -3,86 +3,101 @@
 	"type": "WebApp",
 	"meta": {
 		"name": "GEM",
-		"version": "2.2.5",
-		"minimum-overwolf-version": "0.101",
+		"version": "3.0.2",
+		"minimum-overwolf-version": "0.103.4",
 		"author": "goodbyte",
 		"icon": "IconMouseOver.png",
 		"icon_gray": "IconMouseNormal.png",
-		"description": "Get total control over the Overwolf events API with this simple yet powerful app."
+		"description": "Game Events Manager GEM"
 	},
-	"permissions": ["Clipboard", "Extensions", "FileSystem", "GameControl", "GameInfo", "Hotkeys", "LogitechLed", "Media", "Profile", "Streaming"],
+	"permissions": ["Clipboard", "Extensions", "DesktopStreaming", "FileSystem", "GameControl", "GameInfo", "Hotkeys", "LogitechLed", "Media", "Profile", "Streaming"],
 	"data": {
-		"start_window": "mainWindow",
+		"start_window": "MainWindow",
 		"windows": {
-			"mainWindow": {
+			"MainWindow": {
 				"file": "Files/main.window.html",
-				"transparent": true,
+				"resizable": true,
 				"size": {
-					"width": 350,
-					"height": 490
+					"width": 500,
+					"height": 550
 				},
 				"min_size": {
-					"width": 350,
-					"height": 490
+					"width": 500,
+					"height": 550
 				},
-				"block_top_window_navigation": true
+				"block_top_window_navigation": true,
+				"popup_blocker": true
 			},
-			"playerWindow": {
+			"MacroWindow": {
+				"file": "Files/macro.window.html",
+				"resizable": true,
+				"size": {
+					"width": 700,
+					"height": 740
+				},
+				"min_size": {
+					"width": 685,
+					"height": 677
+				},
+				"block_top_window_navigation": true,
+				"popup_blocker": true
+			},
+			"PlayerWindow": {
 				"file": "Files/player.window.html",
-				"transparent": true,
 				"grab_keyboard_focus": true,
 				"size": {
 					"width": 1280,
 					"height": 720
 				},
-				"block_top_window_navigation": true
+				"block_top_window_navigation": true,
+				"popup_blocker": true
 			},
-			"notificationWindow": {
+			"NotificationWindow": {
 				"file": "Files/notification.window.html",
 				"transparent": true,
 				"show_in_taskbar": false,
 				"grab_focus_on_desktop": false,
 				"size": {
-					"width": 1280,
-					"height": 720
+					"width": 400,
+					"height": 500
 				},
-				"block_top_window_navigation": true
+				"block_top_window_navigation": true,
+				"popup_blocker": true
 			},
-			"macroWindow": {
-				"file": "Files/macro.window.html",
-				"transparent": true,
-				"size": {
-					"width": 980,
-					"height": 720
-				},
-				"start_position": {
-					"top": 150,
-					"left": 200
-				},
-				"block_top_window_navigation": true
-			},
-			"inputWindow": {
+			"InputWindow": {
 				"file": "Files/input.window.html",
 				"transparent": true,
 				"show_in_taskbar": false,
 				"show_only_on_stream": true,
 				"in_game_only": true,
 				"size": {
-					"width": 720,
-					"height": 400
+					"width": 653,
+					"height": 142
 				},
-				"block_top_window_navigation": true
+				"block_top_window_navigation": true,
+				"popup_blocker": true
 			}
 		},
+		"game_events": [8134, 7784, 10480, 7764, 5426, 7314, 10798, 6365, 10844],
 		"hotkeys": {
+			"toggle-GEM": {
+				"title": "Toggle GEM",
+				"action-type": "toggle",
+				"default": "Shift+F7",
+				"passthrough": true
+			},
+			"toggle-capture": {
+				"title": "Toggle capture",
+				"action-type": "custom",
+				"default": "Shift+F8",
+				"passthrough": true
+			},
 			"instant-replay": {
 				"title": "Instant replay",
 				"action-type": "custom",
-				"default": "Shift+F9"
+				"default": "Shift+F9",
+				"passthrough": true
 			}
-		},
-		"protocol_override_domains": {
-			"googlesyndication": "http"
 		}
 	}
 }

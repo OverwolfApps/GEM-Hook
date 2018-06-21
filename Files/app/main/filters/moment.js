@@ -1,14 +1,7 @@
-(function() {
-	'use strict';
-
-	angular
-		.module('gemApp')
-		.filter('moment', Moment);
-
-	function Moment() {
+angular
+	.module('gemApp')
+	.filter('moment', function() {
 		return function(value) {
 			return moment(value).fromNow();
 		};
-	}
-
-}());
+	});
